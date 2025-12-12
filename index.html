@@ -2387,145 +2387,76 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <p><strong>汇率参考</strong>（与行程文档一致，可按实际调整）：1 JPY ≈ 0.049 CNY</p>
 </blockquote>
 <hr />
-<h3 id="汇总可选">0. 汇总（可选）</h3>
+<h3 id="汇总可选">0. 汇总（自动计算）</h3>
+<p style="color: #6a737d; font-size: 0.9em;">汇总表格会根据每日花费记录自动更新</p>
 <table class="editable-table" id="summaryTable" data-table="summary">
 <thead>
 <tr class="header">
 <th>日期</th>
 <th>城市/区域</th>
 <th style="text-align: right;">当日合计(JPY)</th>
-<th style="text-align: right;">交通</th>
-<th style="text-align: right;">餐饮</th>
-<th style="text-align: right;">住宿</th>
-<th style="text-align: right;">门票/体验</th>
-<th style="text-align: right;">购物/伴手礼</th>
-<th style="text-align: right;">其他</th>
-<th>备注</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>2025-12-27</td>
 <td>福冈</td>
-<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="1"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="1"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="1"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="1"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="1"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="1"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="1"></td>
-<td class="editable" contenteditable="true"></td>
+<td class="summary-total" style="text-align: right;" data-day="1" id="summary-day1">0</td>
 </tr>
 <tr class="even">
 <td>2025-12-28</td>
 <td>熊本</td>
-<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="2"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="2"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="2"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="2"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="2"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="2"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="2"></td>
-<td class="editable" contenteditable="true"></td>
+<td class="summary-total" style="text-align: right;" data-day="2" id="summary-day2">0</td>
 </tr>
 <tr class="odd">
 <td>2025-12-29</td>
 <td>阿苏 → 别府</td>
-<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="3"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="3"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="3"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="3"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="3"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="3"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="3"></td>
-<td class="editable" contenteditable="true"></td>
+<td class="summary-total" style="text-align: right;" data-day="3" id="summary-day3">0</td>
 </tr>
 <tr class="even">
 <td>2025-12-30</td>
 <td>别府</td>
-<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="4"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="4"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="4"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="4"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="4"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="4"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="4"></td>
-<td class="editable" contenteditable="true"></td>
+<td class="summary-total" style="text-align: right;" data-day="4" id="summary-day4">0</td>
 </tr>
 <tr class="odd">
 <td>2025-12-31</td>
 <td>由布院 → 福冈（跨年）</td>
-<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="5"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="5"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="5"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="5"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="5"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="5"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="5"></td>
-<td class="editable" contenteditable="true"></td>
+<td class="summary-total" style="text-align: right;" data-day="5" id="summary-day5">0</td>
 </tr>
 <tr class="even">
 <td>2026-01-01</td>
 <td>福冈（元旦）</td>
-<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="6"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="6"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="6"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="6"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="6"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="6"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="6"></td>
-<td class="editable" contenteditable="true"></td>
+<td class="summary-total" style="text-align: right;" data-day="6" id="summary-day6">0</td>
 </tr>
 <tr class="odd">
 <td>2026-01-02</td>
 <td>福冈 → 返程</td>
-<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="7"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="7"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="7"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="7"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="7"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="7"></td>
-<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="7"></td>
-<td class="editable" contenteditable="true"></td>
+<td class="summary-total" style="text-align: right;" data-day="7" id="summary-day7">0</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="记账规则建议">1. 记账规则（建议）</h3>
+<h3 id="记账规则建议">💡 使用说明</h3>
 <ul>
-<li><strong>金额</strong>：统一记录"实际支付金额"（含税）；如后续退税，另记一条"退税入账"作为负数。</li>
-<li><strong>分类</strong>：交通 / 餐饮 / 住宿 / 门票·体验 / 购物·伴手礼 / 通讯 / 便利店 / 其他</li>
-<li><strong>支付方式</strong>：现金 / Suica / 信用卡 / 其他（写清）</li>
-<li><strong>凭证</strong>：有小票就写"有/无"，方便对账；也可记录照片文件名/相册关键字。</li>
+<li>点击表格中的单元格即可直接编辑</li>
+<li>输入项目名称和价格（日元），数据会自动保存</li>
+<li>每日小计和汇总表格会自动计算</li>
+<li>使用"添加一行"按钮可以添加新的花费记录</li>
 </ul>
 <hr />
 <h3 id="day-1-2025-12-27福冈">Day 1｜2025-12-27（福冈）</h3>
 <table class="editable-table" data-table="day1" data-day="1">
 <thead>
 <tr class="header">
-<th>时间</th>
-<th>项目</th>
-<th>分类</th>
-<th style="text-align: right;">金额</th>
-<th>币种</th>
-<th>支付方式</th>
-<th>地点/商家</th>
-<th>是否退税</th>
-<th>备注/凭证</th>
+<th>项目名称</th>
+<th style="text-align: right;">价格（JPY）</th>
 <th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
 <td class="editable amount" contenteditable="true" style="text-align: right;"></td>
-<td class="editable" contenteditable="true">JPY</td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true">否</td>
-<td class="editable" contenteditable="true"></td>
 <td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
@@ -2537,29 +2468,15 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <table class="editable-table" data-table="day2" data-day="2">
 <thead>
 <tr class="header">
-<th>时间</th>
-<th>项目</th>
-<th>分类</th>
-<th style="text-align: right;">金额</th>
-<th>币种</th>
-<th>支付方式</th>
-<th>地点/商家</th>
-<th>是否退税</th>
-<th>备注/凭证</th>
+<th>项目名称</th>
+<th style="text-align: right;">价格（JPY）</th>
 <th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
 <td class="editable amount" contenteditable="true" style="text-align: right;"></td>
-<td class="editable" contenteditable="true">JPY</td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true">否</td>
-<td class="editable" contenteditable="true"></td>
 <td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
@@ -2571,29 +2488,15 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <table class="editable-table" data-table="day3" data-day="3">
 <thead>
 <tr class="header">
-<th>时间</th>
-<th>项目</th>
-<th>分类</th>
-<th style="text-align: right;">金额</th>
-<th>币种</th>
-<th>支付方式</th>
-<th>地点/商家</th>
-<th>是否退税</th>
-<th>备注/凭证</th>
+<th>项目名称</th>
+<th style="text-align: right;">价格（JPY）</th>
 <th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
 <td class="editable amount" contenteditable="true" style="text-align: right;"></td>
-<td class="editable" contenteditable="true">JPY</td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true">否</td>
-<td class="editable" contenteditable="true"></td>
 <td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
@@ -2605,29 +2508,15 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <table class="editable-table" data-table="day4" data-day="4">
 <thead>
 <tr class="header">
-<th>时间</th>
-<th>项目</th>
-<th>分类</th>
-<th style="text-align: right;">金额</th>
-<th>币种</th>
-<th>支付方式</th>
-<th>地点/商家</th>
-<th>是否退税</th>
-<th>备注/凭证</th>
+<th>项目名称</th>
+<th style="text-align: right;">价格（JPY）</th>
 <th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
 <td class="editable amount" contenteditable="true" style="text-align: right;"></td>
-<td class="editable" contenteditable="true">JPY</td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true">否</td>
-<td class="editable" contenteditable="true"></td>
 <td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
@@ -2639,29 +2528,15 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <table class="editable-table" data-table="day5" data-day="5">
 <thead>
 <tr class="header">
-<th>时间</th>
-<th>项目</th>
-<th>分类</th>
-<th style="text-align: right;">金额</th>
-<th>币种</th>
-<th>支付方式</th>
-<th>地点/商家</th>
-<th>是否退税</th>
-<th>备注/凭证</th>
+<th>项目名称</th>
+<th style="text-align: right;">价格（JPY）</th>
 <th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
 <td class="editable amount" contenteditable="true" style="text-align: right;"></td>
-<td class="editable" contenteditable="true">JPY</td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true">否</td>
-<td class="editable" contenteditable="true"></td>
 <td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
@@ -2673,29 +2548,15 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <table class="editable-table" data-table="day6" data-day="6">
 <thead>
 <tr class="header">
-<th>时间</th>
-<th>项目</th>
-<th>分类</th>
-<th style="text-align: right;">金额</th>
-<th>币种</th>
-<th>支付方式</th>
-<th>地点/商家</th>
-<th>是否退税</th>
-<th>备注/凭证</th>
+<th>项目名称</th>
+<th style="text-align: right;">价格（JPY）</th>
 <th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
 <td class="editable amount" contenteditable="true" style="text-align: right;"></td>
-<td class="editable" contenteditable="true">JPY</td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true">否</td>
-<td class="editable" contenteditable="true"></td>
 <td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
@@ -2707,55 +2568,21 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <table class="editable-table" data-table="day7" data-day="7">
 <thead>
 <tr class="header">
-<th>时间</th>
-<th>项目</th>
-<th>分类</th>
-<th style="text-align: right;">金额</th>
-<th>币种</th>
-<th>支付方式</th>
-<th>地点/商家</th>
-<th>是否退税</th>
-<th>备注/凭证</th>
+<th>项目名称</th>
+<th style="text-align: right;">价格（JPY）</th>
 <th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
 <td class="editable amount" contenteditable="true" style="text-align: right;"></td>
-<td class="editable" contenteditable="true">JPY</td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true"></td>
-<td class="editable" contenteditable="true">否</td>
-<td class="editable" contenteditable="true"></td>
 <td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
 </table>
 <button class="add-row-btn" onclick="addRow('day7')">+ 添加一行</button>
 <p><strong>当日小计（JPY）</strong>：<span class="day-total" id="day7-total">0</span></p>
-<hr />
-<h3 id="退税退款记录可选">2. 退税/退款记录（可选）</h3>
-<table>
-<thead>
-<tr class="header">
-<th>日期</th>
-<th>事项</th>
-<th style="text-align: right;">金额(JPY)</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td>退税/退款入账（用负数也可）</td>
-<td style="text-align: right;"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <hr />
 <p><strong>文档生成时间</strong>：2025年11月<br />
 <strong>版本</strong>：V2.0 - 跨年版</p>
@@ -2823,48 +2650,22 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
   function saveData() {
     const data = {};
     
-    // 保存汇总表格
-    const summaryTable = document.getElementById('summaryTable');
-    if (summaryTable) {
-      const rows = summaryTable.querySelectorAll('tbody tr');
-      data.summary = Array.from(rows).map(row => {
-        const cells = row.querySelectorAll('td');
-        return {
-          date: cells[0].textContent.trim(),
-          city: cells[1].textContent.trim(),
-          total: cells[2].textContent.trim(),
-          transport: cells[3].textContent.trim(),
-          food: cells[4].textContent.trim(),
-          accommodation: cells[5].textContent.trim(),
-          tickets: cells[6].textContent.trim(),
-          shopping: cells[7].textContent.trim(),
-          other: cells[8].textContent.trim(),
-          note: cells[9].textContent.trim()
-        };
-      });
-    }
+    // 汇总表格会自动计算，不需要单独保存
     
-    // 保存每日详细记录
-    for (let day = 1; day <= 7; day++) {
-      const table = document.querySelector(`table[data-day="${day}"]`);
-      if (table) {
-        const rows = table.querySelectorAll('tbody tr');
-        data[`day${day}`] = Array.from(rows).map(row => {
-          const cells = row.querySelectorAll('td');
-          return {
-            time: cells[0].textContent.trim(),
-            item: cells[1].textContent.trim(),
-            category: cells[2].textContent.trim(),
-            amount: cells[3].textContent.trim(),
-            currency: cells[4].textContent.trim(),
-            payment: cells[5].textContent.trim(),
-            location: cells[6].textContent.trim(),
-            taxRefund: cells[7].textContent.trim(),
-            note: cells[8].textContent.trim()
-          };
-        });
+      // 保存每日详细记录
+      for (let day = 1; day <= 7; day++) {
+        const table = document.querySelector(`table[data-day="${day}"]`);
+        if (table) {
+          const rows = table.querySelectorAll('tbody tr');
+          data[`day${day}`] = Array.from(rows).map(row => {
+            const cells = row.querySelectorAll('td');
+            return {
+              item: cells[0].textContent.trim(),
+              amount: cells[1].textContent.trim()
+            };
+          });
+        }
       }
-    }
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     updateSaveStatus();
@@ -2878,26 +2679,7 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
     try {
       const data = JSON.parse(saved);
       
-      // 加载汇总表格
-      if (data.summary) {
-        const summaryTable = document.getElementById('summaryTable');
-        if (summaryTable) {
-          const rows = summaryTable.querySelectorAll('tbody tr');
-          data.summary.forEach((rowData, index) => {
-            if (rows[index]) {
-              const cells = rows[index].querySelectorAll('td');
-              if (cells[2]) cells[2].textContent = rowData.total || '';
-              if (cells[3]) cells[3].textContent = rowData.transport || '';
-              if (cells[4]) cells[4].textContent = rowData.food || '';
-              if (cells[5]) cells[5].textContent = rowData.accommodation || '';
-              if (cells[6]) cells[6].textContent = rowData.tickets || '';
-              if (cells[7]) cells[7].textContent = rowData.shopping || '';
-              if (cells[8]) cells[8].textContent = rowData.other || '';
-              if (cells[9]) cells[9].textContent = rowData.note || '';
-            }
-          });
-        }
-      }
+      // 汇总表格会自动计算，不需要单独加载
       
       // 加载每日详细记录
       for (let day = 1; day <= 7; day++) {
@@ -2913,15 +2695,8 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
             dayData.forEach((rowData, index) => {
               const row = firstRow.cloneNode(true);
               const cells = row.querySelectorAll('td');
-              cells[0].textContent = rowData.time || '';
-              cells[1].textContent = rowData.item || '';
-              cells[2].textContent = rowData.category || '';
-              cells[3].textContent = rowData.amount || '';
-              cells[4].textContent = rowData.currency || 'JPY';
-              cells[5].textContent = rowData.payment || '';
-              cells[6].textContent = rowData.location || '';
-              cells[7].textContent = rowData.taxRefund || '否';
-              cells[8].textContent = rowData.note || '';
+              cells[0].textContent = rowData.item || '';
+              cells[1].textContent = rowData.amount || '';
               tbody.appendChild(row);
             });
             
@@ -2957,6 +2732,12 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
       totalElement.textContent = total.toLocaleString('ja-JP');
     }
     
+    // 更新汇总表格
+    const summaryElement = document.getElementById(`summary-day${day}`);
+    if (summaryElement) {
+      summaryElement.textContent = total.toLocaleString('ja-JP');
+    }
+    
     return total;
   }
   
@@ -2987,7 +2768,7 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
     }
   }
   
-  // 添加行
+    // 添加行
   window.addRow = function(tableId) {
     const table = document.querySelector(`table[data-table="${tableId}"]`);
     if (!table) return;
@@ -2997,13 +2778,10 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
     if (!firstRow) return;
     
     const newRow = firstRow.cloneNode(true);
-    // 清空新行的内容（除了默认值）
+    // 清空新行的内容（保留操作列）
     const cells = newRow.querySelectorAll('td');
-    cells.forEach((cell, index) => {
-      if (index !== 4 && index !== 7 && index !== 9) { // 保留币种、是否退税、操作列
-        cell.textContent = '';
-      }
-    });
+    cells[0].textContent = ''; // 项目名称
+    cells[1].textContent = ''; // 价格
     
     tbody.appendChild(newRow);
     debounceSave();
