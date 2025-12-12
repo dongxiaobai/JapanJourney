@@ -268,6 +268,82 @@
       background-color: #e1e4e8;
       border: 0;
     }
+    
+    /* Editable table styles */
+    .editable-table {
+      position: relative;
+    }
+    
+    .editable-table td[contenteditable="true"] {
+      cursor: text;
+      padding: 8px 13px;
+      min-height: 20px;
+      outline: none;
+      transition: background-color 0.2s;
+    }
+    
+    .editable-table td[contenteditable="true"]:hover {
+      background-color: #f0f8ff;
+    }
+    
+    .editable-table td[contenteditable="true"]:focus {
+      background-color: #e6f3ff;
+      border: 1px solid #0366d6;
+    }
+    
+    .save-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 10px 0;
+      transition: background-color 0.2s;
+    }
+    
+    .save-btn:hover {
+      background-color: #22863a;
+    }
+    
+    .save-btn:active {
+      background-color: #1e7e34;
+    }
+    
+    .save-status {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    
+    .save-status.success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    
+    .save-status.error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+    
+    .edit-mode-toggle {
+      background-color: #0366d6;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    
+    .edit-mode-toggle:hover {
+      background-color: #0256cc;
+    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css" />
@@ -2302,13 +2378,17 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <p>祝您旅途愉快！🎌✨🎊 体验难忘的日本传统新年！</p>
 <hr />
 <h2 id="每日花费记录">💰 每日花费记录</h2>
+<div style="background-color: #e7f3ff; padding: 12px; border-radius: 4px; border-left: 4px solid #0366d6; margin-bottom: 20px;">
+  <strong>💡 编辑提示</strong>：点击表格中的单元格即可直接编辑，数据会自动保存到浏览器本地。刷新页面后数据仍然保留。
+  <span id="autoSaveStatus" style="float: right; color: #28a745; font-size: 0.9em;">✓ 已自动保存</span>
+</div>
 <blockquote>
 <p><strong>币种</strong>：默认记录为 <strong>JPY（日元）</strong>；如发生人民币/其他币种支付，请在"币种"列注明并写清换算。</p>
 <p><strong>汇率参考</strong>（与行程文档一致，可按实际调整）：1 JPY ≈ 0.049 CNY</p>
 </blockquote>
 <hr />
 <h3 id="汇总可选">0. 汇总（可选）</h3>
-<table>
+<table class="editable-table" id="summaryTable" data-table="summary">
 <thead>
 <tr class="header">
 <th>日期</th>
@@ -2327,86 +2407,86 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <tr class="odd">
 <td>2025-12-27</td>
 <td>福冈</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td></td>
+<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="1"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="1"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="1"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="1"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="1"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="1"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="1"></td>
+<td class="editable" contenteditable="true"></td>
 </tr>
 <tr class="even">
 <td>2025-12-28</td>
 <td>熊本</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td></td>
+<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="2"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="2"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="2"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="2"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="2"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="2"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="2"></td>
+<td class="editable" contenteditable="true"></td>
 </tr>
 <tr class="odd">
 <td>2025-12-29</td>
 <td>阿苏 → 别府</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td></td>
+<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="3"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="3"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="3"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="3"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="3"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="3"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="3"></td>
+<td class="editable" contenteditable="true"></td>
 </tr>
 <tr class="even">
 <td>2025-12-30</td>
 <td>别府</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td></td>
+<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="4"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="4"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="4"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="4"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="4"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="4"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="4"></td>
+<td class="editable" contenteditable="true"></td>
 </tr>
 <tr class="odd">
 <td>2025-12-31</td>
 <td>由布院 → 福冈（跨年）</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td></td>
+<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="5"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="5"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="5"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="5"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="5"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="5"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="5"></td>
+<td class="editable" contenteditable="true"></td>
 </tr>
 <tr class="even">
 <td>2026-01-01</td>
 <td>福冈（元旦）</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td></td>
+<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="6"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="6"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="6"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="6"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="6"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="6"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="6"></td>
+<td class="editable" contenteditable="true"></td>
 </tr>
 <tr class="odd">
 <td>2026-01-02</td>
 <td>福冈 → 返程</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td></td>
+<td class="editable summary-total" contenteditable="true" style="text-align: right;" data-day="7"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="交通" data-day="7"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="餐饮" data-day="7"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="住宿" data-day="7"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="门票/体验" data-day="7"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="购物/伴手礼" data-day="7"></td>
+<td class="editable" contenteditable="true" style="text-align: right;" data-category="其他" data-day="7"></td>
+<td class="editable" contenteditable="true"></td>
 </tr>
 </tbody>
 </table>
@@ -2420,7 +2500,7 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 </ul>
 <hr />
 <h3 id="day-1-2025-12-27福冈">Day 1｜2025-12-27（福冈）</h3>
-<table>
+<table class="editable-table" data-table="day1" data-day="1">
 <thead>
 <tr class="header">
 <th>时间</th>
@@ -2432,26 +2512,29 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <th>地点/商家</th>
 <th>是否退税</th>
 <th>备注/凭证</th>
+<th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td style="text-align: right;"></td>
-<td>JPY</td>
-<td></td>
-<td></td>
-<td>否</td>
-<td></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable amount" contenteditable="true" style="text-align: right;"></td>
+<td class="editable" contenteditable="true">JPY</td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true">否</td>
+<td class="editable" contenteditable="true"></td>
+<td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
 </table>
-<p><strong>当日小计（JPY）</strong>：</p>
+<button class="add-row-btn" onclick="addRow('day1')">+ 添加一行</button>
+<p><strong>当日小计（JPY）</strong>：<span class="day-total" id="day1-total">0</span></p>
 <hr />
 <h3 id="day-2-2025-12-28熊本">Day 2｜2025-12-28（熊本）</h3>
-<table>
+<table class="editable-table" data-table="day2" data-day="2">
 <thead>
 <tr class="header">
 <th>时间</th>
@@ -2463,26 +2546,29 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <th>地点/商家</th>
 <th>是否退税</th>
 <th>备注/凭证</th>
+<th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td style="text-align: right;"></td>
-<td>JPY</td>
-<td></td>
-<td></td>
-<td>否</td>
-<td></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable amount" contenteditable="true" style="text-align: right;"></td>
+<td class="editable" contenteditable="true">JPY</td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true">否</td>
+<td class="editable" contenteditable="true"></td>
+<td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
 </table>
-<p><strong>当日小计（JPY）</strong>：</p>
+<button class="add-row-btn" onclick="addRow('day2')">+ 添加一行</button>
+<p><strong>当日小计（JPY）</strong>：<span class="day-total" id="day2-total">0</span></p>
 <hr />
 <h3 id="day-3-2025-12-29阿苏-别府">Day 3｜2025-12-29（阿苏 → 别府）</h3>
-<table>
+<table class="editable-table" data-table="day3" data-day="3">
 <thead>
 <tr class="header">
 <th>时间</th>
@@ -2494,26 +2580,29 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <th>地点/商家</th>
 <th>是否退税</th>
 <th>备注/凭证</th>
+<th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td style="text-align: right;"></td>
-<td>JPY</td>
-<td></td>
-<td></td>
-<td>否</td>
-<td></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable amount" contenteditable="true" style="text-align: right;"></td>
+<td class="editable" contenteditable="true">JPY</td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true">否</td>
+<td class="editable" contenteditable="true"></td>
+<td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
 </table>
-<p><strong>当日小计（JPY）</strong>：</p>
+<button class="add-row-btn" onclick="addRow('day3')">+ 添加一行</button>
+<p><strong>当日小计（JPY）</strong>：<span class="day-total" id="day3-total">0</span></p>
 <hr />
 <h3 id="day-4-2025-12-30别府">Day 4｜2025-12-30（别府）</h3>
-<table>
+<table class="editable-table" data-table="day4" data-day="4">
 <thead>
 <tr class="header">
 <th>时间</th>
@@ -2525,26 +2614,29 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <th>地点/商家</th>
 <th>是否退税</th>
 <th>备注/凭证</th>
+<th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td style="text-align: right;"></td>
-<td>JPY</td>
-<td></td>
-<td></td>
-<td>否</td>
-<td></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable amount" contenteditable="true" style="text-align: right;"></td>
+<td class="editable" contenteditable="true">JPY</td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true">否</td>
+<td class="editable" contenteditable="true"></td>
+<td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
 </table>
-<p><strong>当日小计（JPY）</strong>：</p>
+<button class="add-row-btn" onclick="addRow('day4')">+ 添加一行</button>
+<p><strong>当日小计（JPY）</strong>：<span class="day-total" id="day4-total">0</span></p>
 <hr />
 <h3 id="day-5-2025-12-31由布院-福冈跨年">Day 5｜2025-12-31（由布院 → 福冈｜跨年）</h3>
-<table>
+<table class="editable-table" data-table="day5" data-day="5">
 <thead>
 <tr class="header">
 <th>时间</th>
@@ -2556,26 +2648,29 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <th>地点/商家</th>
 <th>是否退税</th>
 <th>备注/凭证</th>
+<th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td style="text-align: right;"></td>
-<td>JPY</td>
-<td></td>
-<td></td>
-<td>否</td>
-<td></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable amount" contenteditable="true" style="text-align: right;"></td>
+<td class="editable" contenteditable="true">JPY</td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true">否</td>
+<td class="editable" contenteditable="true"></td>
+<td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
 </table>
-<p><strong>当日小计（JPY）</strong>：</p>
+<button class="add-row-btn" onclick="addRow('day5')">+ 添加一行</button>
+<p><strong>当日小计（JPY）</strong>：<span class="day-total" id="day5-total">0</span></p>
 <hr />
 <h3 id="day-6-2026-01-01福冈元旦">Day 6｜2026-01-01（福冈｜元旦）</h3>
-<table>
+<table class="editable-table" data-table="day6" data-day="6">
 <thead>
 <tr class="header">
 <th>时间</th>
@@ -2587,26 +2682,29 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <th>地点/商家</th>
 <th>是否退税</th>
 <th>备注/凭证</th>
+<th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td style="text-align: right;"></td>
-<td>JPY</td>
-<td></td>
-<td></td>
-<td>否</td>
-<td></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable amount" contenteditable="true" style="text-align: right;"></td>
+<td class="editable" contenteditable="true">JPY</td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true">否</td>
+<td class="editable" contenteditable="true"></td>
+<td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
 </table>
-<p><strong>当日小计（JPY）</strong>：</p>
+<button class="add-row-btn" onclick="addRow('day6')">+ 添加一行</button>
+<p><strong>当日小计（JPY）</strong>：<span class="day-total" id="day6-total">0</span></p>
 <hr />
 <h3 id="day-7-2026-01-02福冈-返程">Day 7｜2026-01-02（福冈 → 返程）</h3>
-<table>
+<table class="editable-table" data-table="day7" data-day="7">
 <thead>
 <tr class="header">
 <th>时间</th>
@@ -2618,23 +2716,26 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <th>地点/商家</th>
 <th>是否退税</th>
 <th>备注/凭证</th>
+<th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td style="text-align: right;"></td>
-<td>JPY</td>
-<td></td>
-<td></td>
-<td>否</td>
-<td></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable amount" contenteditable="true" style="text-align: right;"></td>
+<td class="editable" contenteditable="true">JPY</td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true"></td>
+<td class="editable" contenteditable="true">否</td>
+<td class="editable" contenteditable="true"></td>
+<td><button class="delete-row-btn" onclick="deleteRow(this)">删除</button></td>
 </tr>
 </tbody>
 </table>
-<p><strong>当日小计（JPY）</strong>：</p>
+<button class="add-row-btn" onclick="addRow('day7')">+ 添加一行</button>
+<p><strong>当日小计（JPY）</strong>：<span class="day-total" id="day7-total">0</span></p>
 <hr />
 <h3 id="退税退款记录可选">2. 退税/退款记录（可选）</h3>
 <table>
@@ -2659,5 +2760,303 @@ type="checkbox" />行李箱（留出伴手礼空间）</label></li>
 <p><strong>文档生成时间</strong>：2025年11月<br />
 <strong>版本</strong>：V2.0 - 跨年版</p>
 </div>
+<script>
+// 编辑和保存功能
+(function() {
+  const STORAGE_KEY = 'japanJourneyExpenses';
+  let saveTimeout;
+  
+  // 样式
+  const style = document.createElement('style');
+  style.textContent = `
+    .editable {
+      cursor: text;
+      min-height: 20px;
+      padding: 4px;
+      transition: background-color 0.2s;
+    }
+    .editable:focus {
+      background-color: #fff3cd;
+      outline: 2px solid #ffc107;
+      border-radius: 2px;
+    }
+    .editable:hover {
+      background-color: #f8f9fa;
+    }
+    .add-row-btn, .delete-row-btn {
+      background-color: #0366d6;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+      margin: 8px 4px;
+    }
+    .add-row-btn:hover, .delete-row-btn:hover {
+      background-color: #0256c2;
+    }
+    .delete-row-btn {
+      background-color: #dc3545;
+      padding: 4px 8px;
+      font-size: 0.85em;
+    }
+    .delete-row-btn:hover {
+      background-color: #c82333;
+    }
+    .day-total {
+      font-weight: bold;
+      color: #0366d6;
+      font-size: 1.1em;
+    }
+    #autoSaveStatus {
+      animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  `;
+  document.head.appendChild(style);
+  
+  // 保存数据到 localStorage
+  function saveData() {
+    const data = {};
+    
+    // 保存汇总表格
+    const summaryTable = document.getElementById('summaryTable');
+    if (summaryTable) {
+      const rows = summaryTable.querySelectorAll('tbody tr');
+      data.summary = Array.from(rows).map(row => {
+        const cells = row.querySelectorAll('td');
+        return {
+          date: cells[0].textContent.trim(),
+          city: cells[1].textContent.trim(),
+          total: cells[2].textContent.trim(),
+          transport: cells[3].textContent.trim(),
+          food: cells[4].textContent.trim(),
+          accommodation: cells[5].textContent.trim(),
+          tickets: cells[6].textContent.trim(),
+          shopping: cells[7].textContent.trim(),
+          other: cells[8].textContent.trim(),
+          note: cells[9].textContent.trim()
+        };
+      });
+    }
+    
+    // 保存每日详细记录
+    for (let day = 1; day <= 7; day++) {
+      const table = document.querySelector(`table[data-day="${day}"]`);
+      if (table) {
+        const rows = table.querySelectorAll('tbody tr');
+        data[`day${day}`] = Array.from(rows).map(row => {
+          const cells = row.querySelectorAll('td');
+          return {
+            time: cells[0].textContent.trim(),
+            item: cells[1].textContent.trim(),
+            category: cells[2].textContent.trim(),
+            amount: cells[3].textContent.trim(),
+            currency: cells[4].textContent.trim(),
+            payment: cells[5].textContent.trim(),
+            location: cells[6].textContent.trim(),
+            taxRefund: cells[7].textContent.trim(),
+            note: cells[8].textContent.trim()
+          };
+        });
+      }
+    }
+    
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    updateSaveStatus();
+  }
+  
+  // 加载数据
+  function loadData() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return;
+    
+    try {
+      const data = JSON.parse(saved);
+      
+      // 加载汇总表格
+      if (data.summary) {
+        const summaryTable = document.getElementById('summaryTable');
+        if (summaryTable) {
+          const rows = summaryTable.querySelectorAll('tbody tr');
+          data.summary.forEach((rowData, index) => {
+            if (rows[index]) {
+              const cells = rows[index].querySelectorAll('td');
+              if (cells[2]) cells[2].textContent = rowData.total || '';
+              if (cells[3]) cells[3].textContent = rowData.transport || '';
+              if (cells[4]) cells[4].textContent = rowData.food || '';
+              if (cells[5]) cells[5].textContent = rowData.accommodation || '';
+              if (cells[6]) cells[6].textContent = rowData.tickets || '';
+              if (cells[7]) cells[7].textContent = rowData.shopping || '';
+              if (cells[8]) cells[8].textContent = rowData.other || '';
+              if (cells[9]) cells[9].textContent = rowData.note || '';
+            }
+          });
+        }
+      }
+      
+      // 加载每日详细记录
+      for (let day = 1; day <= 7; day++) {
+        const dayData = data[`day${day}`];
+        if (dayData) {
+          const table = document.querySelector(`table[data-day="${day}"]`);
+          if (table) {
+            const tbody = table.querySelector('tbody');
+            // 清空现有行（保留第一行）
+            const firstRow = tbody.querySelector('tr');
+            tbody.innerHTML = '';
+            
+            dayData.forEach((rowData, index) => {
+              const row = firstRow.cloneNode(true);
+              const cells = row.querySelectorAll('td');
+              cells[0].textContent = rowData.time || '';
+              cells[1].textContent = rowData.item || '';
+              cells[2].textContent = rowData.category || '';
+              cells[3].textContent = rowData.amount || '';
+              cells[4].textContent = rowData.currency || 'JPY';
+              cells[5].textContent = rowData.payment || '';
+              cells[6].textContent = rowData.location || '';
+              cells[7].textContent = rowData.taxRefund || '否';
+              cells[8].textContent = rowData.note || '';
+              tbody.appendChild(row);
+            });
+            
+            // 如果没有数据，保留一行空行
+            if (dayData.length === 0 && firstRow) {
+              tbody.appendChild(firstRow);
+            }
+          }
+        }
+      }
+      
+      // 重新计算总计
+      calculateAllTotals();
+    } catch (e) {
+      console.error('加载数据失败:', e);
+    }
+  }
+  
+  // 计算每日总计
+  function calculateDayTotal(day) {
+    const table = document.querySelector(`table[data-day="${day}"]`);
+    if (!table) return 0;
+    
+    const amounts = table.querySelectorAll('.amount');
+    let total = 0;
+    amounts.forEach(cell => {
+      const value = parseFloat(cell.textContent.replace(/[^0-9.-]/g, '')) || 0;
+      total += value;
+    });
+    
+    const totalElement = document.getElementById(`day${day}-total`);
+    if (totalElement) {
+      totalElement.textContent = total.toLocaleString('ja-JP');
+    }
+    
+    return total;
+  }
+  
+  // 计算所有总计
+  function calculateAllTotals() {
+    for (let day = 1; day <= 7; day++) {
+      calculateDayTotal(day);
+    }
+  }
+  
+  // 延迟保存
+  function debounceSave() {
+    clearTimeout(saveTimeout);
+    saveTimeout = setTimeout(() => {
+      saveData();
+    }, 500);
+  }
+  
+  // 更新保存状态
+  function updateSaveStatus() {
+    const statusEl = document.getElementById('autoSaveStatus');
+    if (statusEl) {
+      statusEl.textContent = '✓ 已自动保存';
+      statusEl.style.color = '#28a745';
+      setTimeout(() => {
+        statusEl.textContent = '';
+      }, 2000);
+    }
+  }
+  
+  // 添加行
+  window.addRow = function(tableId) {
+    const table = document.querySelector(`table[data-table="${tableId}"]`);
+    if (!table) return;
+    
+    const tbody = table.querySelector('tbody');
+    const firstRow = tbody.querySelector('tr');
+    if (!firstRow) return;
+    
+    const newRow = firstRow.cloneNode(true);
+    // 清空新行的内容（除了默认值）
+    const cells = newRow.querySelectorAll('td');
+    cells.forEach((cell, index) => {
+      if (index !== 4 && index !== 7 && index !== 9) { // 保留币种、是否退税、操作列
+        cell.textContent = '';
+      }
+    });
+    
+    tbody.appendChild(newRow);
+    debounceSave();
+    calculateAllTotals();
+  };
+  
+  // 删除行
+  window.deleteRow = function(btn) {
+    const row = btn.closest('tr');
+    const tbody = row.closest('tbody');
+    if (tbody.querySelectorAll('tr').length > 1) {
+      row.remove();
+      debounceSave();
+      calculateAllTotals();
+    } else {
+      alert('至少需要保留一行记录');
+    }
+  };
+  
+  // 绑定编辑事件
+  document.addEventListener('DOMContentLoaded', function() {
+    // 为所有可编辑单元格添加事件监听
+    document.querySelectorAll('.editable').forEach(cell => {
+      cell.addEventListener('blur', debounceSave);
+      cell.addEventListener('input', function() {
+        if (this.classList.contains('amount')) {
+          calculateAllTotals();
+        }
+      });
+    });
+    
+    // 加载保存的数据
+    loadData();
+    
+    // 初始计算
+    calculateAllTotals();
+  });
+  
+  // 监听新添加的行的编辑事件
+  document.addEventListener('focusin', function(e) {
+    if (e.target.classList.contains('editable')) {
+      if (!e.target.hasAttribute('data-listener')) {
+        e.target.setAttribute('data-listener', 'true');
+        e.target.addEventListener('blur', debounceSave);
+        e.target.addEventListener('input', function() {
+          if (this.classList.contains('amount')) {
+            calculateAllTotals();
+          }
+        });
+      }
+    }
+  });
+})();
+</script>
 </body>
 </html>
