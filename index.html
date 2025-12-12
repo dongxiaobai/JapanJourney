@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>九州旅行规划</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+      /* 每一天的行程单独分页 */
+      h3[id^="day-"] {
+        page-break-before: always;
+        page-break-after: avoid;
+        border-top: 2px solid #e1e4e8;
+        padding-top: 1em;
+        margin-top: 2em;
+      }
+      /* 所有Day标题都强制分页，包括Day 1 */
+      h3[id^="day-1"],
+      h3[id^="day-2"],
+      h3[id^="day-3"],
+      h3[id^="day-4"],
+      h3[id^="day-5"],
+      h3[id^="day-6"],
+      h3[id^="day-7"] {
+        page-break-before: always;
+      }
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    
+    /* GitHub Markdown styles */
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+    
+    /* Table of Contents */
+    #TOC {
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 16px;
+      background-color: #f6f8fa;
+    }
+    
+    #TOC ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    #TOC > ul {
+      padding-left: 0;
+    }
+    
+    #TOC li {
+      margin: 8px 0;
+    }
+    
+    #TOC a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    
+    #TOC a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Headers */
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 24px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    
+    h1 {
+      font-size: 2em;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.3em;
+    }
+    
+    h2 {
+      font-size: 1.5em;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.3em;
+    }
+    
+    
+    /* Lists */
+    ul, ol {
+      padding-left: 2em;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    
+    li {
+      margin: 0.25em 0;
+    }
+    
+    /* Tables */
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+    }
+    
+    table th, table td {
+      border: 1px solid #dfe2e5;
+      padding: 6px 13px;
+    }
+    
+    table th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+    }
+    
+    table tr:nth-child(2n) {
+      background-color: #f6f8fa;
+    }
+    
+    /* Code blocks */
+    code {
+      padding: 0.2em 0.4em;
+      margin: 0;
+      font-size: 85%;
+      background-color: rgba(27,31,35,0.05);
+      border-radius: 3px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    }
+    
+    pre {
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: #f6f8fa;
+      border-radius: 6px;
+    }
+    
+    pre code {
+      display: inline;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      background-color: transparent;
+      border-radius: 0;
+    }
+    
+    /* Blockquotes */
+    blockquote {
+      padding: 0 1em;
+      color: #6a737d;
+      border-left: 0.25em solid #dfe2e5;
+      margin: 0;
+    }
+    
+    /* Links */
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Horizontal rules */
+    hr {
+      height: 0.25em;
+      padding: 0;
+      margin: 24px 0;
+      background-color: #e1e4e8;
+      border: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5/github-markdown.min.css" />
+</head>
+<body>
+<div class="markdown-body">
+<h1 id="九州旅行行程规划">九州旅行行程规划</h1>
+<p><strong>旅行时间</strong>：2025年12月27日（周六）-
+2026年1月2日（周五）<br />
+<strong>旅行天数</strong>：7天6晚<br />
+<strong>旅行路线</strong>：福冈 → 熊本 → 阿苏 → 别府（2晚）→
+福冈（跨年）</p>
+<p>✅ <strong>优化路线</strong>：不走回头路,阿苏直达别府！<br />
+🎊 <strong>特别体验</strong>：日本传统新年庆祝活动 +
+别府温泉深度体验<br />
+🏨 <strong>住宿确认</strong>： - 12/28 熊本：东横旅馆 熊本站前 -
+12/29-30 别府：Hotel Calm + amenek酒店（2晚） - 12/31-1/1
+福冈：华盛顿R&amp;B酒店博多站前第2（2晚）</p>
+<hr />
+<h2 id="价格说明">💴 价格说明</h2>
+<p><strong>重要</strong>：本行程中所有价格均为<strong>日元（JPY）</strong></p>
+<p><strong>汇率参考</strong>（2025年12月）：</p>
+<ul>
+<li>1 日元 ≈ 0.049 人民币</li>
+<li>100 日元 ≈ 4.9 人民币</li>
+<li>10,000 日元 ≈ 490 人民币</li>
+</ul>
+<p><strong>预算换算</strong>：</p>
+<ul>
+<li>总预算 ¥110,000-150,000 <strong>日元</strong> ≈ <strong>5,390-7,350
+人民币</strong>（不含机票）</li>
+<li>相比原方案节省 ¥20,000-30,000 <strong>日元</strong> ≈
+<strong>980-1,470 人民币</strong></li>
+</ul>
+<hr />
+<h2 id="详细行程安排">📅 详细行程安排</h2>
+<h3 id="day-1-12月27日周六--抵达福冈">Day 1: 12月27日（周六）-
+抵达福冈</h3>
+<h4 id="航班信息">航班信息</h4>
+<ul>
+<li><strong>起飞时间</strong>：14:05（春秋航空）✅ 已更新</li>
+<li><strong>到达时间</strong>：17:00 福冈机场 ✅ 已更新</li>
+</ul>
+<p>💡 <strong>航班变更说明</strong>：</p>
+<ul>
+<li>⚠️ <strong>原计划</strong>：12:15起飞，14:55到达</li>
+<li>✅ <strong>新计划</strong>：14:05起飞，17:00到达</li>
+<li><strong>影响</strong>：到达时间晚了约2小时，<strong>错过福冈塔日落时间（17:10）</strong></li>
+</ul>
+<h4 id="时间安排">时间安排</h4>
+<p><strong>17:00</strong> 抵达福冈机场</p>
+<ul>
+<li><strong>办理入境手续、取行李</strong>：约30-50分钟
+<ul>
+<li><strong>入境流程</strong>：
+<ul>
+<li>下飞机到入境大厅：5-10分钟</li>
+<li>入境审查：10-30分钟（17:00是高峰时段，可能排队较长）</li>
+<li>取行李：5-15分钟</li>
+<li>海关检查：5-10分钟</li>
+</ul>
+</li>
+<li><strong>⚠️ 注意</strong>：17:00是高峰时段，建议预留40-50分钟</li>
+<li><strong>💡 建议</strong>：提前填写入境卡和海关申报单（飞机上），准备好护照、签证、酒店地址</li>
+</ul>
+</li>
+<li><strong>兑换JR Pass</strong>（如需要）：5-10分钟</li>
+<li><strong>购买/充值西瓜卡</strong>（手机已有，检查余额）：2-5分钟</li>
+</ul>
+<p><strong>预计出机场时间</strong>：17:30-17:50（如果30分钟内完成，可提前出发）</p>
+<p><strong>17:30-18:30</strong> 从机场直接前往餐厅 ✅ 已选择</p>
+<p>💡 <strong>你的选择</strong>：直接从机场去餐厅，不寄存行李，自己背着 ✅</p>
+<p><strong>推荐路线</strong>：<strong>机场线到袛园站，然后步行到餐厅</strong> ⭐⭐⭐⭐⭐ ✅ 已选择</p>
+<ul>
+<li><strong>地铁</strong>：福冈机场 → 袛园站（空港線，机场线直达，无需转车）
+<ul>
+<li><strong>时间</strong>：约10-15分钟</li>
+<li><strong>费用</strong>：¥260</li>
+<li><strong>优点</strong>：机场线直达，无需转车</li>
+<li><strong>方向</strong>：乘坐开往姪滨方向的机场线列车</li>
+</ul>
+</li>
+<li><strong>步行</strong>：从袛园站步行到餐厅
+<ul>
+<li><strong>地址</strong>：福冈市博多区天屋町7-28</li>
+<li><strong>距离</strong>：从袛园站步行约5-10分钟（需用Google Maps确认）</li>
+<li><strong>路线</strong>：从袛园站出站后，使用Google Maps导航到天屋町7-28</li>
+</ul>
+</li>
+<li><strong>预计到达餐厅时间</strong>：18:15-18:30</li>
+</ul>
+<p>💡 <strong>福冈地铁线路说明</strong>：</p>
+<ul>
+<li><strong>空港線（机场线）</strong>：福冈机场 → <strong>袛园站</strong> → 博多站 → 中洲川端 → 天神</li>
+<li><strong>餐厅位置</strong>：博多区天屋町7-28（从袛园站步行可达）</li>
+</ul>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>✅ 机场线直达袛园站，无需转车</li>
+<li>✅ 袛园站离餐厅较近，步行方便</li>
+<li>✅ 费用便宜（¥260）</li>
+<li>✅ 不用寄存行李，自己背着</li>
+<li>✅ 路线更直接，少走路</li>
+</ul>
+<p><strong>18:30-18:50</strong> 到达餐厅附近，稍作休息</p>
+<ul>
+<li>确认餐厅位置</li>
+<li>如果时间充裕，可以在附近逛逛</li>
+<li>如果早到了，可以在附近休息一下</li>
+<li>💡 <strong>建议</strong>：提前5-10分钟到达餐厅（18:50-18:55）</li>
+</ul>
+<p><strong>18:50-19:00</strong> 到达餐厅，准备用餐</p>
+<ul>
+<li>提前5-10分钟到达餐厅</li>
+<li>如果餐厅允许，可以提前进入或等待</li>
+<li>19:00准时入座</li>
+</ul>
+<p><strong>19:00-20:00</strong> 晚餐：おおやま（Oyama）牛肠锅 ⭐⭐⭐⭐⭐ ✅ 已预订</p>
+<ul>
+<li><strong>预订时间</strong>：12/27（周六）19:00（7:00 PM）✅</li>
+<li><strong>餐厅</strong>：おおやま（Oyama）本店</li>
+<li><strong>地址</strong>：福冈市博多区天屋町7-28</li>
+<li><strong>特色</strong>：入口即化的精选内脏锅，人气极高</li>
+<li><strong>价格</strong>：约¥2,000-4,000/人</li>
+<li><strong>评价</strong>：4.4分（2453条评论）</li>
+<li><strong>用餐时间</strong>：约1小时（正常用餐速度）</li>
+<li><strong>注意事项</strong>：
+<ul>
+<li>✅ 已预订19:00，请准时到达</li>
+<li>建议提前5-10分钟到达</li>
+<li>如需要取消，请提前联系餐厅</li>
+</ul></li>
+</ul>
+<p><strong>20:00-21:00</strong> 晚餐后安排</p>
+<p>💡 <strong>晚餐后选择</strong>：</p>
+<ul>
+<li><strong>方案A：直接返回酒店休息</strong>（推荐）⭐⭐⭐⭐⭐
+<ul>
+<li>第一天比较累，早点休息，准备第二天出发</li>
+<li>从餐厅返回酒店（步行或地铁）</li>
+</ul>
+</li>
+<li><strong>方案B：去福冈塔看夜景</strong>（如果还有精力）⭐⭐⭐
+<ul>
+<li><strong>时间</strong>：20:00-21:30（约1.5小时）</li>
+<li><strong>交通</strong>：袛园站 → 博多站 → 西新站（约20分钟）+ 步行10分钟</li>
+<li><strong>到达时间</strong>：约20:30</li>
+<li><strong>游览时间</strong>：约1小时（如果营业至22:00）</li>
+<li><strong>⚠️ 注意</strong>：需要确认福冈塔12月营业时间（可能21:00闭馆）</li>
+</ul>
+</li>
+</ul>
+<p>---</p>
+<h4>💡 Day 1 行程调整说明</h4>
+<h5>⚠️ 主要变化</h5>
+<ol>
+<li><strong>福冈塔看日落已取消</strong>
+<ul>
+<li><strong>原因</strong>：到达时间17:00，日落时间17:10已过</li>
+<li><strong>原计划</strong>：16:30-18:00 福冈塔看日落</li>
+<li><strong>新安排</strong>：取消，改到其他天</li>
+</ul>
+</li>
+<li><strong>晚餐时间保持不变</strong>
+<ul>
+<li>✅ 19:00晚餐（已预订），时间充裕</li>
+</ul>
+</li>
+<li><strong>福冈塔门票处理</strong>
+<ul>
+<li>✅ 已预订门票¥800</li>
+<li>💡 <strong>建议改到</strong>：
+<ul>
+<li><strong>方案A</strong>：1/2上午去福冈塔（如果航班较晚）</li>
+<li><strong>方案B</strong>：1/1下午去福冈塔（如果开放）</li>
+<li><strong>方案C</strong>：如果门票可以退，可以退掉</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h5>✅ 推荐安排（已优化）</h5>
+<p><strong>Day 1（12/27）简化版</strong>：</p>
+<ul>
+<li>17:00 到达机场</li>
+<li>17:30-18:30 从机场直接前往餐厅（机场线到袛园站+步行）✅</li>
+<li>18:30-18:50 到达餐厅附近，稍作休息</li>
+<li>18:50-19:00 提前到达餐厅（提前5-10分钟）</li>
+<li>19:00-20:00 晚餐（おおやま牛肠锅）✅ 已预订（约1小时）</li>
+<li>20:00-21:00 晚餐后安排（返回酒店或去福冈塔）</li>
+</ul>
+<p>💡 <strong>你的选择</strong>：</p>
+<ul>
+<li>✅ 直接从机场去餐厅，不寄存行李</li>
+<li>✅ 自己背着行李</li>
+<li>✅ 简化流程，更直接</li>
+</ul>
+<p><strong>福冈塔改到</strong>：</p>
+<ul>
+<li><strong>推荐</strong>：1/2上午（如果航班较晚，方案A）</li>
+<li><strong>备选</strong>：1/1下午（如果开放）</li>
+</ul>
+<h4 id="住宿安排">住宿安排</h4>
+<ul>
+<li><strong>快活CLUB</strong>（已计划）⭐⭐⭐
+<ul>
+<li><strong>位置</strong>：博多站或天神附近</li>
+<li><strong>特色</strong>：胶囊旅馆/网吧，价格实惠</li>
+<li><strong>注意</strong>：需要到店注册会员（使用护照）</li>
+<li><strong>建议</strong>：选择离博多站近的分店，方便第二天出发</li>
+<li><strong>⚠️ 需要确认</strong>：
+<ul>
+<li>具体分店地址和电话</li>
+<li>营业时间（24小时营业）</li>
+<li>是否需要提前预约（跨年期间可能紧张）</li>
+<li>会员注册流程和所需材料</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="美食推荐">美食推荐</h4>
+<ul>
+<li><strong>晚餐：おおやま（Oyama）牛肠锅</strong> ⭐⭐⭐⭐⭐ ✅ 已预订
+<ul>
+<li><strong>预订时间</strong>：12/27（周六）19:00 ✅</li>
+<li><strong>地址</strong>：福冈市博多区天屋町7-28（袛园站附近，步行约5-10分钟）✅</li>
+<li><strong>特色</strong>：入口即化的精选内脏锅，人气极高</li>
+<li><strong>价格</strong>：约¥2,000-4,000/人</li>
+<li><strong>评价</strong>：4.4分（2453条评论）</li>
+</ul></li>
+</ul>
+<h4 id="景点推荐">景点推荐</h4>
+<ul>
+<li><strong>福冈塔</strong> ⭐⭐⭐⭐⭐ ✅ 已预订门票
+<ul>
+<li><strong>门票</strong>：¥800 ✅ 已预订</li>
+<li><strong>地址</strong>：福冈市早良区百道浜2-3-26</li>
+<li><strong>营业时间</strong>：9:30-22:00（10月至3月营业至21:00）</li>
+<li><strong>原计划</strong>：12/27看日落（17:10-17:30）⚠️ <strong>已取消</strong>（航班延误）</li>
+<li><strong>新安排</strong>：💡 <strong>建议改到1/2上午</strong>（如果航班较晚）或1/1下午（如果开放）</li>
+<li><strong>特色</strong>：日本最高的海滨塔（234米），360度全景观赏福冈市区和博多湾</li>
+<li><strong>交通</strong>：地铁博多站 → 西新站（约10分钟，¥200），步行约10分钟</li>
+<li><strong>最佳观景时间</strong>：
+<ul>
+<li><strong>原计划</strong>：16:45-17:10（日落前），17:10-17:30（日落黄金时刻），17:30-18:00（夜景）</li>
+<li><strong>新安排</strong>：上午看海景，或下午看日景（看不到日落了）</li>
+</ul>
+</li>
+</ul></li>
+<li><strong>百道滨海滩</strong>
+<ul>
+<li><strong>位置</strong>：紧邻福冈塔</li>
+<li><strong>特色</strong>：海滩散步，欣赏海景，适合拍照</li>
+<li><strong>安排</strong>：如果去福冈塔，可以顺便逛逛</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="day-2-12月28日周日--福冈-熊本">Day 2: 12月28日（周日）- 福冈 →
+熊本</h3>
+<h4 id="时间安排-1">时间安排</h4>
+<ul>
+<li><strong>上午</strong>
+<ul>
+<li>09:00 乘坐新干线前往熊本（约40分钟，¥5,000）</li>
+<li>10:00 抵达熊本，寄存行李</li>
+<li>10:30-11:00 前往熊本城/城彩苑区域
+<ul>
+<li>交通：从熊本站搭乘市营路面电车至”熊本城·市役所前”站（约15分钟，¥170）</li>
+<li>或出租车：约¥1,500-2,000（约10分钟）</li>
+</ul></li>
+</ul></li>
+<li><strong>中午</strong>
+<ul>
+<li>11:00-12:30 熊本城参观（3馆门票）✅ 已预订
+<ul>
+<li>游览时间：约1.5小时（紧凑游览）</li>
+</ul></li>
+<li>12:30-13:30 <strong>樱之马场城彩苑</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>位置</strong>：紧邻熊本城，步行即达</li>
+<li><strong>特色</strong>：再现熊本城下町风貌，餐厅、商店、体验设施</li>
+<li><strong>活动</strong>：
+<ul>
+<li>午餐：在城彩苑内品尝熊本特色料理（太平燕、马肉料理、熊本拉面等）</li>
+<li>购物：购买熊本特产和纪念品</li>
+<li>体验：传统手工艺体验（可选）</li>
+</ul></li>
+<li><strong>推荐餐厅</strong>：城彩苑内有多家餐厅，可选择熊本特色料理</li>
+<li>⚠️
+<strong>备选</strong>：如果城彩苑餐厅人多，可前往下通商店街的黑亭拉面</li>
+</ul></li>
+</ul></li>
+<li><strong>下午</strong>
+<ul>
+<li>13:30-14:00 前往熊本熊广场
+<ul>
+<li>交通：从城彩苑步行约15分钟，或搭乘路面电车</li>
+</ul></li>
+<li>14:00-15:00 <strong>熊本熊广场</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>位置</strong>：熊本市中央区手取本町8-2（鹤屋百货东馆1楼）</li>
+<li><strong>开放时间</strong>：周日 11:30～、14:00～（有舞台表演）</li>
+<li><strong>特色</strong>：熊本熊的活动据点，定期举办舞台表演和互动活动</li>
+<li><strong>活动</strong>：观看14:00的舞台表演（约30分钟）</li>
+<li><strong>注意事项</strong>：
+<ul>
+<li>建议提前15分钟到达，确保有座位</li>
+<li>可以购买熊本熊周边商品</li>
+<li>与熊本熊合影留念</li>
+</ul></li>
+</ul></li>
+<li>15:00-15:30 下通商店街简单逛逛</li>
+<li>15:30-16:30 水前寺成趣园日式庭园散步
+<ul>
+<li>游览时间：约1小时</li>
+</ul></li>
+<li>16:30-18:00 下通商店街购物或返回酒店</li>
+</ul></li>
+<li><strong>晚上</strong>
+<ul>
+<li>18:30 品尝熊本特色料理（马肉料理等）</li>
+<li>入住熊本市区酒店</li>
+</ul></li>
+</ul>
+<h4 id="住宿安排-1">住宿安排</h4>
+<ul>
+<li><strong>东横旅馆 熊本站前</strong>（東横INN 熊本駅前）⭐
+<ul>
+<li><strong>地址</strong>：熊本站前</li>
+<li><strong>特点</strong>：经济型商务酒店，交通便利，距离熊本站步行即达</li>
+</ul></li>
+</ul>
+<h4 id="美食推荐-1">美食推荐</h4>
+<ul>
+<li><strong>午餐</strong>（12:30-13:30）
+<ul>
+<li><strong>城彩苑内餐厅</strong>：品尝熊本特色料理（太平燕、马肉料理、熊本拉面等）</li>
+<li><strong>备选</strong>：黑亭拉面（下通店）- 地址：熊本市中央区下通1-5-19</li>
+</ul></li>
+<li><strong>晚餐</strong>（18:30）
+<ul>
+<li><strong>马肉料理（马刺し）- 菅乃屋（すがのや）</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>地址</strong>：熊本市中央区下通1-2-8</li>
+<li><strong>价格</strong>：约¥3,000-5,000/人</li>
+<li><strong>注意</strong>：如果不敢吃生肉，可以尝试马肉火锅或马肉寿司</li>
+</ul></li>
+</ul></li>
+<li><strong>特色小吃</strong>
+<ul>
+<li>からしれんこん（芥末莲藕）：约¥300-500/份</li>
+<li>いきなり団子（蒸薯团子）：约¥200-400/个</li>
+</ul></li>
+</ul>
+<h4 id="景点推荐-1">景点推荐</h4>
+<ul>
+<li><strong>熊本城</strong> ✅ 已预订3馆门票 ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>门票</strong>：¥800 ✅ 已预订（3馆门票）</li>
+<li><strong>地址</strong>：熊本市中央区本丸1-1</li>
+<li><strong>开放时间</strong>：08:30-17:30（最后入场17:00）</li>
+<li><strong>3馆包括</strong>：熊本城、本丸御殿、加藤神社</li>
+<li><strong>交通</strong>：市营路面电车"熊本城·市役所前"站，步行约15分钟</li>
+<li><strong>建议游览时间</strong>：1.5-2小时</li>
+<li><strong>注意</strong>：主城楼正在修复中，但外观仍可观赏</li>
+</ul></li>
+<li><strong>樱之马场城彩苑</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>地址</strong>：熊本市中央区二之丸1-1-2（紧邻熊本城，步行即达）</li>
+<li><strong>门票</strong>：免费入场（部分体验设施需付费）</li>
+<li><strong>开放时间</strong>：09:00-17:30（17:00停止入园）</li>
+<li><strong>特色</strong>：再现熊本城下町风貌，餐厅、商店、体验设施</li>
+<li><strong>建议游览时间</strong>：1-1.5小时（含午餐）</li>
+</ul></li>
+<li><strong>熊本熊广场</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>地址</strong>：熊本市中央区手取本町8-2（鹤屋百货东馆1楼）</li>
+<li><strong>门票</strong>：免费入场</li>
+<li><strong>开放时间</strong>：周日 11:30～、14:00～（有舞台表演）</li>
+<li><strong>交通</strong>：从城彩苑步行约15分钟，或搭乘路面电车至"通町筋"站</li>
+<li><strong>特色</strong>：熊本熊的活动据点，定期举办舞台表演和互动活动</li>
+<li><strong>建议游览时间</strong>：1小时（含观看表演）</li>
+<li><strong>注意事项</strong>：建议提前15分钟到达，确保有座位观看14:00的表演</li>
+</ul></li>
+<li><strong>水前寺成趣园</strong>
+<ul>
+<li><strong>门票</strong>：¥400</li>
+<li><strong>开放时间</strong>：07:30-18:00</li>
+<li><strong>建议游览时间</strong>：约1小时</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="day-3-12月29日周一--熊本-阿苏-别府">Day 3: 12月29日（周一）-
+熊本 → 阿苏 → 别府</h3>
+<h4 id="时间安排-2">时间安排</h4>
+<ul>
+<li><strong>上午</strong>（乘坐阿苏男孩号观光列车）⭐⭐⭐⭐⭐
+<ul>
+<li>07:30 退房，携带全部行李</li>
+<li>09:00 熊本站准备上车（提前到车站拍照）</li>
+<li><strong>09:57 ASO BOY 1号出发</strong> 🚂 ✅ 已预约指定席
+<ul>
+<li>黑色小狗主题观光列车</li>
+<li>可爱的内装设计</li>
+<li>车内有儿童游乐区、木球池</li>
+<li>全景座位观赏沿途风景</li>
+<li>拍照打卡</li>
+</ul></li>
+<li><strong>约11:32 到达阿苏站</strong> ✅
+<ul>
+<li>阿苏男孩号终点站是阿苏站</li>
+<li>从阿苏站到阿苏火山口巴士约35分钟</li>
+</ul></li>
+</ul></li>
+<li><strong>中午</strong>
+<ul>
+<li>11:32 到达阿苏站，下车</li>
+<li>11:45-12:30 阿苏站附近午餐（赤牛料理）</li>
+</ul></li>
+<li><strong>下午</strong>
+<ul>
+<li>12:45
+从阿苏站前往阿苏火山口（巴士约35分钟，¥650或出租车约¥3,000-4,000）</li>
+<li>13:30-14:30 <strong>阿苏火山口游览</strong>
+<ul>
+<li>乘坐缆车前往火山口（门票¥1,000含缆车）</li>
+<li>观赏火山口景观，拍照留念</li>
+<li>参观火山博物馆（可选）</li>
+<li>⚠️ 注意：开放时间9:00-16:30，17:00关门</li>
+</ul></li>
+<li>14:30-15:00 <strong>草千里观光</strong>
+<ul>
+<li>从火山口前往草千里（步行或巴士）</li>
+<li>欣赏广阔的草原景观</li>
+<li>拍照留念</li>
+</ul></li>
+<li>15:00-15:15 返回阿苏站（巴士或出租车）</li>
+<li>15:30-16:00 从阿苏站乘JR前往别府（需在大分转车，约2.5小时）</li>
+</ul></li>
+<li><strong>傍晚</strong>
+<ul>
+<li>18:30 抵达别府站</li>
+<li>19:00 Hotel Calm办理入住，放下行李</li>
+<li>19:30 别府站附近简餐（快速解决）</li>
+</ul></li>
+<li><strong>晚上</strong>（别府海滨沙浴体验）⭐⭐⭐⭐⭐
+<ul>
+<li>20:00 前往别府海滨砂汤（从Hotel Calm打车约10分钟，¥1,500）</li>
+<li>20:15-21:15 <strong>海滨沙浴体验</strong>
+<ul>
+<li>换专用浴衣</li>
+<li>沙浴10-15分钟（被热沙覆盖，面朝大海）</li>
+<li>室内温泉冲洗、泡汤</li>
+<li>免费足汤</li>
+<li>营业到22:00，最晚接待21:00 ⚠️</li>
+</ul></li>
+<li>21:30 打车返回Hotel Calm（约10分钟）</li>
+<li>22:00 酒店休息</li>
+</ul></li>
+</ul>
+<p>💡 <strong>行程亮点</strong>：</p>
+<ul>
+<li>✅ 上午乘坐<strong>阿苏男孩号观光列车</strong>（超可爱！）</li>
+<li>✅ 在阿苏站下车（终点站）✅</li>
+<li>✅ JR Pass免费，需提前预约指定席 ✅ 已预约</li>
+<li>✅ 11:32到达阿苏站，从阿苏站到火山口巴士约35分钟</li>
+<li>✅ 下午阿苏火山、草千里精华游览</li>
+<li>✅ 傍晚到达别府，时间充裕</li>
+<li>✅
+晚上体验<strong>别府海滨沙浴</strong>（面朝大海，独特体验）⭐⭐⭐⭐⭐</li>
+</ul>
+<h4 id="景点信息-1">景点信息</h4>
+<p><strong>阿苏男孩号观光列车</strong>（ASO BOY!）⭐⭐⭐⭐⭐</p>
+<ul>
+<li><strong>列车名称</strong>：阿苏男孩！（ASO BOY!）</li>
+<li><strong>主题</strong>：黑色小狗「小黑（くろちゃん）」</li>
+<li><strong>车次</strong>：ASO BOY 1号</li>
+<li><strong>发车时间</strong>：09:57（熊本站）✅ 已预约</li>
+<li><strong>到达时间</strong>：约11:32（阿苏站）← 在这里下车 ✅</li>
+<li><strong>车程</strong>：约1小时35分钟</li>
+<li><strong>停车站</strong>：熊本→新水前寺→水前寺→肥后大津→立野→赤水→<strong>阿苏</strong>（终点站）</li>
+<li><strong>票价</strong>：
+<ul>
+<li>✅ <strong>JR Pass免费！</strong>（已购买）</li>
+<li>仅需提前预约指定席（免费）</li>
+<li>全车指定席，必须预约</li>
+</ul></li>
+<li><strong>特色</strong>：
+<ul>
+<li>🐕 黑白小狗主题，超可爱</li>
+<li>👶 车内儿童游乐区「白色小狗的游乐场」</li>
+<li>🎪 木球池游乐区</li>
+<li>📚 图书角</li>
+<li>🪑 家庭座位（可转向面对面）</li>
+<li>🪟 全景大窗户观景</li>
+<li>📸 车内拍照打卡点</li>
+<li>🎨 可爱的内装设计</li>
+</ul></li>
+<li><strong>预约</strong>：
+<ul>
+<li>⚠️ <strong>必须提前预约指定席！</strong>（很热门）</li>
+<li>持JR Pass在JR绿色窗口预约（免费）</li>
+<li>或网上预约：https://www.jrkyushu.co.jp/</li>
+<li>建议至少提前1周预约</li>
+<li>跨年期间更紧张，越早越好</li>
+</ul></li>
+</ul>
+<p><strong>阿苏火山口</strong></p>
+<ul>
+<li><strong>门票</strong>：¥1,000（含缆车）</li>
+<li><strong>开放时间</strong>：9:00-16:30（17:00关门）⚠️</li>
+<li><strong>游览内容</strong>：乘坐缆车前往火山口，观赏火山口景观</li>
+<li>⚠️
+<strong>注意</strong>：出发前查询最新开放情况（官网：http://www.aso-volcano.jp/chinese/html/hours.html）</li>
+</ul>
+<p><strong>草千里</strong></p>
+<ul>
+<li><strong>门票</strong>：免费</li>
+<li><strong>游览内容</strong>：广阔的草原景观，适合拍照</li>
+</ul>
+<p><strong>交通</strong>（阿苏站 → 火山口）</p>
+<ul>
+<li><strong>巴士</strong>：阿苏站前 →
+阿苏山上终点站，约35分钟，¥650单程</li>
+<li><strong>建议班次</strong>：12:50或13:30（根据11:32到达阿苏站）</li>
+<li><strong>返程</strong>：需在阿苏山上终点站查询返程时刻表，末班车14:35</li>
+<li><strong>或打车</strong>：约¥3,000-4,000单程</li>
+</ul>
+<p><strong>别府海滨沙浴</strong>（别府海浜砂湯）⭐⭐⭐⭐⭐</p>
+<ul>
+<li><strong>位置</strong>：上人滨海岸（別府湾畔）</li>
+<li><strong>营业时间</strong>：08:00-22:00（⚠️ 最晚接待21:00）</li>
+<li><strong>费用</strong>：成人¥2,500（含专用浴衣、浴巾、沙浴+温泉）</li>
+<li><strong>特色</strong>：
+<ul>
+<li>🌊 日本唯一可以边看海边沙浴的温泉</li>
+<li>🏖️ 100多年历史的传统体验</li>
+<li>被温热的沙子覆盖全身（仅露出头部）</li>
+<li>利用地热和沙子重量促进血液循环</li>
+<li>面朝别府湾，风景绝佳</li>
+</ul></li>
+<li><strong>体验流程</strong>（约40-50分钟）：
+<ol type="1">
+<li>前台付费、换专用浴衣（提供）</li>
+<li>躺在沙坑中，工作人员用热沙覆盖全身</li>
+<li>静躺10-15分钟（全身发热排汗）</li>
+<li>起身拍掉沙子</li>
+<li>进入室内温泉冲洗、泡汤</li>
+<li>还有免费足汤可以使用</li>
+</ol></li>
+<li><strong>交通</strong>：
+<ul>
+<li>从Hotel Calm打车约10分钟，¥1,500左右</li>
+<li>从别府站乘巴士约15分钟（巴士站：上人滨站）</li>
+</ul></li>
+<li><strong>预约</strong>：不需要预约，直接去即可</li>
+<li><strong>注意事项</strong>：
+<ul>
+<li>⚠️ 12/29晚上20:00前到达，赶在21:00最晚接待前</li>
+<li>沙浴后会出很多汗，记得补充水分</li>
+<li>沙浴时不能带手机拍照（会进沙子）</li>
+<li>高血压、心脏病患者需谨慎</li>
+</ul></li>
+</ul>
+<h4 id="交通方式使用jr-pass">交通方式（使用JR Pass）</h4>
+<p><strong>JR路线</strong>（已购买JR Pass，全程免费） - <strong>熊本 →
+阿苏</strong> - ⭐ <strong>阿苏男孩1号观光列车</strong>（推荐！） -
+09:57熊本 → 11:32阿苏 - 约1小时35分钟 - JR Pass免费，需预约指定席 ✅</p>
+<ul>
+<li><strong>阿苏 → 别府</strong>
+<ul>
+<li>JR豊肥本線（阿苏 → 大分）+ JR日豊本線（大分 → 别府）</li>
+<li>约2.5小时（需在大分转车）</li>
+<li>JR Pass可用 ✅</li>
+</ul></li>
+</ul>
+<p><strong>阿苏站前往火山口</strong>（需另付费，JR Pass不包含） -
+<strong>从阿苏站</strong>：巴士约35分钟，¥650单程，¥1,300往返；或出租车约¥3,000-4,000单程
+- ⚠️ <strong>注意</strong>：JR Pass不包含巴士和出租车费用</p>
+<h4 id="住宿安排-2">住宿安排</h4>
+<ul>
+<li><strong>Hotel Calm</strong>（第1晚）
+<ul>
+<li><strong>地址</strong>：别府市内</li>
+<li><strong>特点</strong>：经济型酒店，交通便利</li>
+</ul></li>
+</ul>
+<h4 id="美食推荐-1">美食推荐</h4>
+<ul>
+<li><strong>午餐</strong>（11:45-12:30）
+<ul>
+<li>赤牛丼（阿苏特产）</li>
+<li>高菜饭</li>
+<li>阿苏牛奶、布丁</li>
+</ul></li>
+<li><strong>晚餐</strong>（19:30）
+<ul>
+<li>别府站附近简餐（快速解决）</li>
+</ul></li>
+</ul>
+<h4 id="景点推荐-2">景点推荐</h4>
+<ul>
+<li><strong>阿苏男孩号观光列车</strong>（ASO BOY!）⭐⭐⭐⭐⭐ ✅ 已预约
+<ul>
+<li><strong>车次</strong>：ASO BOY 1号</li>
+<li><strong>发车时间</strong>：09:57（熊本站）✅ 已预约</li>
+<li><strong>到达时间</strong>：约11:32（阿苏站）</li>
+<li><strong>车程</strong>：约1小时35分钟</li>
+<li><strong>票价</strong>：✅ JR Pass免费（需提前预约指定席）</li>
+<li><strong>特色</strong>：黑白小狗主题，车内儿童游乐区、木球池、全景大窗户观景</li>
+<li><strong>预约</strong>：⚠️ 必须提前预约指定席（很热门）</li>
+</ul></li>
+<li><strong>阿苏火山口</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>门票</strong>：¥1,000（含缆车）</li>
+<li><strong>开放时间</strong>：9:00-16:30（17:00关门）⚠️</li>
+<li><strong>交通</strong>（阿苏站 → 火山口）：
+<ul>
+<li>巴士：约35分钟，¥650单程，¥1,300往返</li>
+<li>或出租车：约¥3,000-4,000单程</li>
+</ul></li>
+<li><strong>⚠️ 需要确认</strong>：出发前查询最新开放情况（官网：http://www.aso-volcano.jp/chinese/html/hours.html）</li>
+<li><strong>⚠️ 注意</strong>：巴士返程末班车14:35，需确认时刻表</li>
+</ul></li>
+<li><strong>草千里</strong>
+<ul>
+<li><strong>门票</strong>：免费</li>
+<li><strong>特色</strong>：广阔的草原景观，适合拍照</li>
+</ul></li>
+<li><strong>别府海滨沙浴</strong>（别府海浜砂湯）⭐⭐⭐⭐⭐
+<ul>
+<li><strong>位置</strong>：上人滨海岸（別府湾畔）</li>
+<li><strong>营业时间</strong>：08:00-22:00（⚠️ 最晚接待21:00）</li>
+<li><strong>费用</strong>：成人¥2,500（含专用浴衣、浴巾、沙浴+温泉）</li>
+<li><strong>特色</strong>：日本唯一可以边看海边沙浴的温泉，面朝别府湾，风景绝佳</li>
+<li><strong>交通</strong>：从Hotel Calm打车约10分钟，¥1,500左右</li>
+<li><strong>体验流程</strong>：约40-50分钟（沙浴10-15分钟 + 温泉冲洗）</li>
+<li><strong>⚠️ 需要确认</strong>：具体地址、12/29晚上营业情况、联系电话</li>
+<li><strong>注意事项</strong>：沙浴时不能带手机拍照，沙浴后会出很多汗，记得补充水分</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="day-4-12月30日周二--别府深度游览">Day 4: 12月30日（周二）-
+别府深度游览</h3>
+<h4 id="时间安排-3">时间安排</h4>
+<ul>
+<li><p><strong>上午</strong></p>
+<ul>
+<li>09:00 Hotel Calm早餐</li>
+<li>10:00 退房，寄存行李</li>
+<li>10:30-13:00 <strong>别府八地狱温泉巡游</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li>通票：¥2,200（8个地狱）</li>
+<li>必看：海地狱（蓝色）、血池地狱（红色）、龙卷地狱（间歇泉）</li>
+</ul></li>
+</ul></li>
+<li><p><strong>中午</strong></p>
+<ul>
+<li>13:00-14:00 <strong>地狱蒸料理午餐</strong>（岡本屋）⭐⭐⭐⭐⭐</li>
+</ul></li>
+<li><p><strong>下午</strong></p>
+<ul>
+<li>14:30-16:00 <strong>明礬温泉街</strong>（汤之花小屋拍照）或铁轮温泉街散步</li>
+</ul></li>
+<li><p><strong>傍晚</strong></p>
+<ul>
+<li>16:30 返回别府站，取行李</li>
+<li>17:00 前往amenek酒店办理入住</li>
+</ul></li>
+<li><p><strong>晚上</strong></p>
+<ul>
+<li>18:00 酒店附近晚餐</li>
+<li>19:30 amenek酒店温泉放松</li>
+</ul></li>
+</ul>
+<h4 id="住宿安排-3">住宿安排</h4>
+<ul>
+<li><strong>amenek酒店</strong>（第2晚）
+<ul>
+<li><strong>地址</strong>：别府市内</li>
+<li><strong>特点</strong>：现代化酒店，有温泉设施</li>
+</ul></li>
+</ul>
+<h4 id="美食推荐-2">美食推荐</h4>
+<ul>
+<li><strong>午餐</strong>（13:00-14:00）
+<ul>
+<li><strong>地狱蒸料理</strong>（岡本屋）⭐⭐⭐⭐⭐
+<ul>
+<li>用温泉蒸汽烹饪的料理，别府必吃！</li>
+</ul></li>
+</ul></li>
+<li><strong>伴手礼</strong>
+<ul>
+<li>地狱蒸布丁</li>
+</ul></li>
+</ul>
+<h4 id="景点推荐-3">景点推荐</h4>
+<ul>
+<li><strong>别府八地狱温泉巡游</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>通票</strong>：¥2,200（8个地狱，2日有效）</li>
+<li><strong>必看</strong>：海地狱（蓝色）、血池地狱（红色）、龙卷地狱（间歇泉）</li>
+<li><strong>交通</strong>：从别府站乘巴士约20分钟到铁轮温泉</li>
+</ul></li>
+<li><strong>明礬温泉街</strong> ⭐⭐⭐⭐
+<ul>
+<li><strong>主要看点</strong>：汤之花小屋（茅草屋建筑群，拍照打卡）</li>
+<li><strong>门票</strong>：免费参观</li>
+<li><strong>交通</strong>：从铁轮打车约10分钟，¥1,500；或从别府站乘巴士约25分钟</li>
+</ul></li>
+<li><strong>铁轮温泉街</strong>
+<ul>
+<li><strong>特色</strong>：免费足汤多处，适合散步</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="day-5-12月31日周三--由布院半日游-由布院之森列车-福冈跨年">Day 5:
+12月31日（周三）- 由布院半日游 + 由布院之森列车 + 福冈跨年
+⭐⭐⭐⭐⭐</h3>
+<h4 id="时间安排-4">时间安排</h4>
+<ul>
+<li><strong>早上</strong>
+<ul>
+<li>07:00 amenek酒店早餐（提前）</li>
+<li>07:45 退房，携带全部行李</li>
+<li>08:00 从别府站乘JR前往由布院（约50分钟，¥960）</li>
+<li>08:50 抵达由布院站，寄存行李（车站有投币储物柜）</li>
+</ul></li>
+<li><strong>上午</strong>（梦想园温泉）⭐⭐⭐⭐⭐
+<ul>
+<li>09:00 打车前往梦想园（约¥1,500，10分钟）</li>
+<li>09:30-12:30 <strong>梦想园日归温泉</strong>
+<ul>
+<li>地址：大分県由布市湯布院町川上1556-2</li>
+<li>日归入浴时间：10:00-14:00 ⚠️ 必须14:00前离开</li>
+<li>费用：约¥1,500-2,000</li>
+<li>特点：高台温泉，边泡边看由布岳美景</li>
+<li>3小时充足时间，好好享受</li>
+</ul></li>
+<li>12:30 打车返回由布院站（约¥1,500）</li>
+</ul></li>
+<li><strong>中午</strong>
+<ul>
+<li>13:00-14:30 <strong>由布院午餐 + 购物</strong>
+<ul>
+<li>午餐：由布まぶし心（丰后牛盖饭）</li>
+<li>购物：B-speak瑞士卷（必买！）⭐⭐⭐⭐⭐</li>
+<li>金賞可乐饼（现炸现吃）</li>
+<li>汤之坪街道快速逛逛</li>
+</ul></li>
+</ul></li>
+<li><strong>下午</strong>（由布院之森观光列车）⭐⭐⭐⭐⭐
+<ul>
+<li>14:45 返回由布院站，取行李</li>
+<li>15:30 提前检票，准备上车</li>
+<li><strong>15:56 由布院之森5号</strong> 出发 ✅ 已确认
+<ul>
+<li>九州最有名的观光列车</li>
+<li>豪华复古设计，座位舒适</li>
+<li>沿途风景优美</li>
+<li>车上可以拍照、购买纪念品</li>
+</ul></li>
+<li><strong>18:10 抵达博多站</strong></li>
+</ul></li>
+<li><strong>傍晚</strong>（时间安排）✅
+<ul>
+<li><strong>18:10 抵达博多站</strong></li>
+<li><strong>选择方案：直接前往餐厅</strong> ⭐⭐⭐⭐⭐ ✅
+<ul>
+<li><strong>18:10-18:15</strong> 快速处理行李
+<ul>
+<li>行李不多，可以选择：
+<ul>
+<li><strong>方案A</strong>：快速在车站寄存小件行李（投币储物柜，约5分钟）</li>
+<li><strong>方案B</strong>：直接带着行李去餐厅（如果餐厅有地方存放）</li>
+</ul></li>
+</ul></li>
+<li><strong>18:15-18:30</strong> 前往地鶏屋 亜門餐厅 ✅ 已确认路线
+<ul>
+<li><strong>餐厅地址</strong>：福冈市博多区中洲2-8-10 ✅ 已确认</li>
+<li><strong>交通方式</strong>（推荐）：
+<ul>
+<li><strong>地铁</strong>：博多站 → 中洲川端站（机场线，往姪滨方向，1站，约2分钟，¥200）</li>
+<li><strong>步行</strong>：从中洲川端站1号出口步行约5分钟到餐厅</li>
+<li><strong>总时间</strong>：约7-10分钟（地铁2分钟 + 步行5分钟）</li>
+<li><strong>优点</strong>：地铁直达，无需转车，时间充裕，不会迟到</li>
+</ul>
+</li>
+<li><strong>备选方案</strong>：
+<ul>
+<li><strong>步行</strong>：从博多站步行约20分钟（如果时间充裕）</li>
+<li><strong>出租车</strong>：约5-10分钟（如果行李较多）</li>
+</ul>
+</li>
+</ul></li>
+<li><strong>18:30-18:55</strong> 到达餐厅附近，稍作休息
+<ul>
+<li>如果带着行李，可以询问餐厅是否可以存放</li>
+</ul></li>
+<li><strong>19:00</strong> 准时到达餐厅</li>
+</ul></li>
+<li>⚠️ <strong>注意</strong>：跨年夜很多商店会提前关门，购物时间有限</li>
+</ul></li>
+<li><strong>晚上</strong>（跨年准备）
+<ul>
+<li><strong>19:00-21:00 跨年晚餐：地鶏屋 亜門</strong> ⭐⭐⭐⭐⭐ ✅ 已预订
+<ul>
+<li><strong>预订时间</strong>：12/31（周三）19:00（7:00 PM）✅</li>
+<li><strong>餐厅</strong>：地鶏屋 亜門（地鸡屋 亚门）</li>
+<li><strong>地址</strong>：福冈市博多区中洲2-8-10 ✅ 已确认</li>
+<li><strong>交通方式</strong>（从博多站）：
+<ul>
+<li><strong>推荐</strong>：地铁博多站 → 中洲川端站（机场线，1站，约2分钟，¥200）→ 步行5分钟 ✅</li>
+<li><strong>总时间</strong>：约7-10分钟</li>
+<li><strong>备选</strong>：步行约20分钟，或出租车约5-10分钟</li>
+</ul>
+</li>
+<li><strong>营业时间</strong>：周一至周六 17:30-次日3:00（最后点餐2:30），周日休息
+<ul>
+<li>⚠️ <strong>注意</strong>：12/31是周三，正常营业 ✅</li>
+</ul>
+</li>
+<li><strong>特色</strong>：福冈地鸡料理，跨年特色年夜饭</li>
+<li><strong>用餐时间</strong>：约1.5-2小时</li>
+<li><strong>注意事项</strong>：
+<ul>
+<li>✅ 已预订19:00，请准时到达</li>
+<li>✅ 建议提前5-10分钟到达（18:50-18:55）</li>
+<li>✅ 从博多站出发，18:15-18:30前往，时间充裕</li>
+<li>如果带着行李，可以询问餐厅是否可以存放</li>
+<li>如需要取消，请提前联系餐厅</li>
+</ul></li>
+</ul></li>
+<li><strong>21:00-21:30</strong> 从餐厅前往酒店办理入住
+<ul>
+<li>如果行李寄存在车站，先回博多站取行李（约10分钟）</li>
+<li>如果行李在餐厅，直接带着行李前往酒店</li>
+<li>前往华盛顿R&amp;B酒店办理入住（从博多站步行约5分钟）</li>
+<li>办理入住并放行李到房间（约15-20分钟）</li>
+</ul></li>
+<li><strong>21:30-22:00</strong> 酒店休息，准备跨年</li>
+<li><strong>22:00</strong> 前往跨年地点（栉田神社或天神）</li>
+<li><strong>23:30</strong> 参加跨年倒数</li>
+</ul></li>
+</ul>
+<h4 id="住宿安排-4">住宿安排</h4>
+<ul>
+<li><strong>华盛顿R&amp;B酒店博多站前第2</strong>（R&amp;Bホテル博多駅前第2）⭐
+<ul>
+<li><strong>地址</strong>：福冈市博多区博多駅前</li>
+<li><strong>特点</strong>：商务酒店，博多站步行约5分钟，交通便利</li>
+<li>✅ <strong>已预订：12/31-1/1（连住2晚）</strong></li>
+<li><strong>✅ 选择安排</strong>：
+<ul>
+<li>18:10到达博多站后，<strong>直接前往地鶏屋 亜門餐厅</strong>（行李不多）</li>
+<li>19:00吃跨年晚餐</li>
+<li>21:00吃完饭后再去酒店办理入住</li>
+<li><strong>优势</strong>：时间更充裕，避免办理入住排队导致迟到</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="美食推荐-3">美食推荐</h4>
+<ul>
+<li><strong>午餐</strong>（13:00-14:30）
+<ul>
+<li><strong>由布まぶし心</strong>（丰后牛盖饭）</li>
+<li><strong>B-speak瑞士卷</strong>（必买！）⭐⭐⭐⭐⭐</li>
+<li><strong>金賞可乐饼</strong>（现炸现吃）</li>
+</ul></li>
+<li><strong>晚餐</strong>（19:00-21:00）
+<ul>
+<li><strong>地鶏屋 亜門</strong>（地鸡屋 亚门）⭐⭐⭐⭐⭐ ✅ 已预订
+<ul>
+<li><strong>预订时间</strong>：12/31（周三）19:00 ✅</li>
+<li><strong>特色</strong>：福冈地鸡料理，跨年特色年夜饭</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="景点推荐-4">景点推荐</h4>
+<ul>
+<li><strong>由布院梦想园温泉</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>地址</strong>：大分県由布市湯布院町川上1556-2</li>
+<li><strong>日归入浴时间</strong>：10:00-14:00 ⚠️</li>
+<li><strong>费用</strong>：约¥1,500-2,000</li>
+<li><strong>特点</strong>：高台温泉，俯瞰由布院盆地，边泡边看由布岳</li>
+<li><strong>交通</strong>：由布院站打车约10分钟（¥1,500）</li>
+<li><strong>⚠️ 需要确认</strong>：是否需要提前预约，12/31的营业情况</li>
+</ul></li>
+<li><strong>由布院之森观光列车</strong> ⭐⭐⭐⭐⭐ ✅ 已预约
+<ul>
+<li><strong>车次</strong>：由布院之森5号</li>
+<li><strong>发车时间</strong>：15:56 ✅ 已确认</li>
+<li><strong>到达时间</strong>：18:10（博多站）</li>
+<li><strong>车程</strong>：约2小时10分钟</li>
+<li><strong>票价</strong>：✅ JR Pass免费（需提前预约指定席）</li>
+<li><strong>特色</strong>：九州最有名的观光列车，绿色复古豪华设计，大窗户观景</li>
+</ul></li>
+<li><strong>福冈跨年地点推荐</strong>
+<ul>
+<li><strong>栉田神社</strong>（传统日式跨年）⭐⭐⭐推荐
+<ul>
+<li>特色：除夜祭、新年参拜（初詣）</li>
+<li>氛围：传统、神圣，人流较多，需提前到达</li>
+</ul></li>
+<li><strong>福冈塔</strong>（现代灯光秀）
+<ul>
+<li>跨年特别开放，需提前预约（约¥1,500）</li>
+</ul></li>
+<li><strong>天神/博多站商圈</strong>
+<ul>
+<li>各大商场有倒数活动，氛围热闹</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="跨年特别提醒">⚠️ 跨年特别提醒</h4>
+<ul>
+<li><strong>商店营业</strong>：很多商店会提前关门（下午或傍晚）</li>
+<li><strong>餐厅</strong>：建议提前预约，或选择连锁餐厅</li>
+<li><strong>交通</strong>：公共交通会延长运营时间</li>
+<li><strong>建议</strong>：在便利店备一些食物</li>
+</ul>
+<hr />
+<h3 id="day-6-1月1日周四--福冈新年第一天">Day 6: 1月1日（周四）-
+福冈新年第一天 🎊</h3>
+<h4 id="元旦特别提醒">⚠️ 元旦特别提醒</h4>
+<ul>
+<li><strong>很多商店和景点会关闭</strong></li>
+<li><strong>便利店正常营业</strong>（7-11、全家、罗森）</li>
+<li><strong>部分餐厅休息</strong>，建议提前查询</li>
+<li><strong>寺庙神社会很热闹</strong>（初詣参拜）</li>
+<li><strong>体验日本传统新年氛围</strong></li>
+</ul>
+<h4 id="时间安排-5">时间安排</h4>
+<ul>
+<li><strong>上午</strong>
+<ul>
+<li>09:00 睡到自然醒（跨年后休息）</li>
+<li>10:30 便利店早午餐或酒店早餐</li>
+<li>11:30 <strong>栉田神社新年参拜</strong>（初詣）⭐⭐⭐</li>
+</ul></li>
+<li><strong>中午</strong>
+<ul>
+<li>12:00-13:00 <strong>午餐：ひつまぶし 和食 備長 中洲川端店</strong>（鳗鱼饭）⭐⭐⭐⭐ ✅ 已选择
+<ul>
+<li><strong>位置</strong>：中洲川端站附近（从栉田神社步行约5-10分钟）</li>
+<li><strong>特色</strong>：备长炭烤鳗鱼饭，日式传统料理</li>
+<li>⚠️ <strong>需确认</strong>：元旦是否营业</li>
+</ul>
+</li>
+</ul></li>
+<li><strong>下午</strong>
+<ul>
+<li>13:00-13:30 从餐厅前往福冈城迹/大濠公园</li>
+<li>13:30-15:00 福冈城迹/大濠公园散步（免费，开放）</li>
+<li>15:30-17:00 海滨百道海边漫步</li>
+<li>17:30 回酒店休息</li>
+</ul></li>
+<li><strong>晚上</strong>
+<ul>
+<li>19:00 <strong>武藏餐厅晚餐</strong>（黑毛和牛 博多牛まぶし 武藏 天神店）⭐⭐⭐⭐⭐ ⚠️ 需预订
+<ul>
+<li><strong>餐厅</strong>：黑毛和牛 博多牛まぶし 武藏 天神店</li>
+<li><strong>特色</strong>：黑毛和牛牛肉饭（博多牛まぶし）</li>
+<li><strong>地址</strong>：福冈市中央区天神（具体地址需确认）</li>
+<li><strong>交通</strong>：从博多站或酒店前往天神（地铁约5-10分钟）</li>
+<li>⚠️ <strong>重要</strong>：1月1日是元旦，需提前确认是否营业并预订</li>
+<li><strong>预订方式</strong>：建议通过AutoReserve或电话预订</li>
+</ul>
+</li>
+<li>准备明天行程</li>
+</ul></li>
+</ul>
+<h4 id="住宿安排-5">住宿安排</h4>
+<ul>
+<li><strong>华盛顿R&amp;B酒店博多站前第2</strong>（R&amp;Bホテル博多駅前第2）⭐
+<ul>
+<li>✅ <strong>已预订：12/31-1/1（连住2晚）</strong></li>
+<li>同一酒店，无需搬行李，方便！</li>
+</ul></li>
+</ul>
+<h4 id="美食推荐-4">美食推荐</h4>
+<ul>
+<li><strong>午餐</strong>（12:00-13:00）✅ 已选择：鳗鱼饭 ⚠️ 元旦期间需确认营业
+<ul>
+<li><strong>✅ 已选择：ひつまぶし 和食 備長 中洲川端店</strong> ⭐⭐⭐⭐
+<ul>
+<li><strong>位置</strong>：中洲川端站附近（从栉田神社步行约5-10分钟）</li>
+<li><strong>特色</strong>：备长炭烤鳗鱼饭，日式传统料理</li>
+<li><strong>价格</strong>：约¥1,500-3,000</li>
+<li><strong>优点</strong>：离栉田神社近，参拜完直接用餐，鳗鱼饭是日本传统料理</li>
+<li>⚠️ <strong>需确认</strong>：元旦是否营业，建议提前电话确认</li>
+<li><strong>交通</strong>：从栉田神社步行约5-10分钟到中洲川端站附近</li>
+<li><strong>用餐时间</strong>：约45-60分钟</li>
+</ul>
+</li>
+<li><strong>其他备选方案</strong>（如果鳗鱼饭不营业）：
+<ul>
+<li><strong>推荐方案A：博多站附近餐厅</strong> ⭐⭐⭐⭐
+<ul>
+<li><strong>一兰拉面 博多站店</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>位置</strong>：JR博多站内或附近</li>
+<li><strong>特色</strong>：福冈最著名的豚骨拉面，24小时营业（元旦期间需确认）</li>
+<li><strong>价格</strong>：约¥800-1,200</li>
+<li><strong>优点</strong>：福冈特色，元旦可能营业，从栉田神社步行约10-15分钟</li>
+</ul>
+</li>
+<li><strong>一风堂 博多站店</strong> ⭐⭐⭐⭐⭐
+<ul>
+<li><strong>位置</strong>：JR博多站附近</li>
+<li><strong>特色</strong>：正宗博多豚骨拉面，汤头浓郁</li>
+<li><strong>价格</strong>：约¥800-1,200</li>
+<li><strong>优点</strong>：福冈特色，元旦可能营业</li>
+</ul>
+</li>
+<li><strong>水炊料亭 博多华味鸟 博多站筑紫口店</strong> ⭐⭐⭐⭐
+<ul>
+<li><strong>位置</strong>：博多站筑紫口步行5分钟</li>
+<li><strong>特色</strong>：传统水炊鸡肉火锅，福冈特色料理</li>
+<li><strong>午餐时间</strong>：11:30-15:00</li>
+<li><strong>价格</strong>：约¥1,500-3,000</li>
+<li><strong>优点</strong>：福冈特色料理，午餐时间合适</li>
+<li>⚠️ <strong>需确认</strong>：元旦是否营业</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>推荐方案B：栉田神社附近</strong> ⭐⭐⭐⭐
+<ul>
+<li><strong>中洲川端站附近餐厅</strong>
+<ul>
+<li><strong>ひつまぶし 和食 備長 中洲川端店</strong> ⭐⭐⭐⭐
+<ul>
+<li><strong>位置</strong>：中洲川端站附近（从栉田神社步行约5-10分钟）</li>
+<li><strong>特色</strong>：备长炭烤鳗鱼饭，日式料理</li>
+<li><strong>价格</strong>：约¥1,500-3,000</li>
+<li><strong>优点</strong>：离栉田神社近，参拜完直接用餐</li>
+<li>⚠️ <strong>需确认</strong>：元旦是否营业</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>推荐方案C：连锁餐厅（保险选择）</strong> ⭐⭐⭐
+<ul>
+<li><strong>吉野家、松屋、麦当劳</strong>等
+<ul>
+<li><strong>优点</strong>：元旦通常营业，价格实惠，快速方便</li>
+<li><strong>位置</strong>：博多站附近有多家</li>
+<li><strong>价格</strong>：约¥500-1,000</li>
+<li><strong>适合</strong>：如果其他餐厅都不营业的备选方案</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>推荐方案D：便利店</strong> ⭐⭐
+<ul>
+<li><strong>7-11、全家、罗森</strong>
+<ul>
+<li><strong>优点</strong>：元旦肯定营业，选择多样</li>
+<li><strong>适合</strong>：简单快速解决，或作为备选</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>💡 <strong>午餐时间安排建议</strong>：
+<ul>
+<li><strong>11:30-12:00</strong> 栉田神社参拜</li>
+<li><strong>12:00-12:15</strong> 前往餐厅（步行或地铁）</li>
+<li><strong>12:15-13:00</strong> 午餐时间</li>
+<li><strong>13:00-13:30</strong> 前往福冈城迹/大濠公园</li>
+</ul>
+</li>
+<li>⚠️ <strong>重要提醒</strong>：
+<ul>
+<li>1月1日是元旦，<strong>建议提前确认餐厅是否营业</strong></li>
+<li>推荐优先选择<strong>博多站附近的连锁拉面店</strong>（一兰、一风堂），元旦营业可能性较大</li>
+<li>如果时间紧张，可以选择<strong>便利店</strong>快速解决</li>
+</ul>
+</li>
+<li><strong>晚餐</strong>（19:00）
+<ul>
+<li><strong>黑毛和牛 博多牛まぶし 武藏 天神店</strong> ⭐⭐⭐⭐⭐ ⚠️ 需预订
+<ul>
+<li><strong>预订时间</strong>：1/1（周四）19:00 ⚠️ 需确认是否营业</li>
+<li><strong>餐厅</strong>：黑毛和牛 博多牛まぶし 武藏 天神店</li>
+<li><strong>地址</strong>：福冈市中央区天神（具体地址需确认）</li>
+<li><strong>交通</strong>（从博多站）：
+<ul>
+<li><strong>地铁</strong>：博多站 → 天神站（机场线或七隈线，约5-10分钟）</li>
+<li><strong>步行</strong>：从栉田神社步行约15-20分钟到天神</li>
+</ul>
+</li>
+<li><strong>特色</strong>：黑毛和牛牛肉饭（博多牛まぶし），福冈特色料理</li>
+<li><strong>预订方式</strong>：
+<ul>
+<li>AutoReserve在线预订：<a href="https://autoreserve.com/zh-cn/restaurants/y3tDTnWRJr7jFUkzqNma">https://autoreserve.com/zh-cn/restaurants/y3tDTnWRJr7jFUkzqNma</a></li>
+<li>或电话预订（需查找电话）</li>
+</ul>
+</li>
+<li>⚠️ <strong>重要提醒</strong>：
+<ul>
+<li>1月1日是元旦，很多餐厅休息，<strong>必须提前确认是否营业</strong></li>
+<li>建议尽早预订，元旦期间可能很紧张</li>
+<li>如果武藏不营业，备选：便利店或连锁餐厅</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>其他营业的地方</strong>：
+<ul>
+<li>便利店（7-11、全家、罗森）</li>
+<li>连锁餐厅（麦当劳、吉野家、松屋等）</li>
+<li>部分拉面店（一兰等）</li>
+<li>酒店餐厅</li>
+</ul>
+</li>
+<li><strong>注意</strong>：百货商店和小餐馆大部分关闭</li>
+</ul>
+<h4 id="景点推荐-5">景点推荐</h4>
+<ul>
+<li><strong>栉田神社</strong>（初詣）⭐⭐⭐
+<ul>
+<li><strong>门票</strong>：免费参拜</li>
+<li><strong>特色</strong>：新年第一天人很多，但非常有氛围</li>
+<li><strong>活动</strong>：可以购买御守、抽签（おみくじ）</li>
+</ul></li>
+<li><strong>大濠公园</strong>
+<ul>
+<li><strong>门票</strong>：免费开放</li>
+<li><strong>特色</strong>：环湖散步约2公里，元旦期间开放</li>
+</ul></li>
+<li><strong>福冈城迹</strong>
+<ul>
+<li><strong>门票</strong>：免费</li>
+<li><strong>特色</strong>：历史遗迹，适合散步</li>
+</ul></li>
+<li><strong>福冈塔</strong>
+<ul>
+<li>⚠️ 元旦可能休息或缩短营业，需提前确认</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="day-7-1月2日周五--福冈购物太宰府-返程">Day 7: 1月2日（周五）-
+福冈购物/太宰府 + 返程</h3>
+<h4 id="月2日营业情况">⚠️ 1月2日营业情况</h4>
+<ul>
+<li><strong>大部分商店开始恢复营业</strong></li>
+<li><strong>百货商店可能从下午开始营业</strong></li>
+<li><strong>太宰府天满宫正常开放</strong></li>
+</ul>
+<h4 id="时间安排根据航班时间选择">时间安排（根据航班时间选择）</h4>
+<p><strong>方案A：太宰府半日游</strong>（如果航班较晚） -
+<strong>上午</strong> - 08:00 酒店早餐 - 09:00
+前往太宰府天满宫（西铁电车25分钟） - 09:30-11:30 太宰府参拜、参道购物 -
+品尝梅枝饼、星巴克太宰府店 - <strong>中午</strong> - 12:00 返回博多/天神
+- 12:30 午餐 - <strong>下午</strong> - 13:30-16:30
+<strong>最后购物</strong> - 博多站：MING、东急手创、阪急百货 -
+天神地下街 - 博多运河城 - 17:00 最后采购伴手礼 - <strong>晚上</strong> -
+18:00 前往福冈机场（地铁约5分钟） - 办理登机手续 - 出发回上海</p>
+<p><strong>方案B：福冈塔 + 购物</strong>（如果航班较晚，推荐）⭐⭐⭐⭐⭐ -
+<strong>上午</strong> - 09:00 酒店早餐 - 10:00-11:30
+<strong>福冈塔看海景</strong>（使用12/27预订的门票）⭐ -
+<strong>门票</strong>：¥800 ✅ 已预订（12/27因航班延误未使用） -
+<strong>营业时间</strong>：09:30-22:00（1月2日需确认） -
+<strong>特色</strong>：360度全景观赏福冈市区和博多湾海景 -
+<strong>交通</strong>：地铁博多站 → 西新站（约10分钟，¥200），步行约10分钟 -
+<strong>游览时间</strong>：约1-1.5小时 - 或者
+<strong>大濠公园散步</strong>（如果不想去福冈塔） - <strong>下午</strong> - 12:00
+午餐（商店开始营业） - 13:00-16:00 <strong>购物时间</strong> -
+博多运河城 - 天神地下街 - 博多站（MING、东急手创、阪急百货） - 16:30
+最后采购伴手礼 - <strong>晚上</strong> - 17:30 前往福冈机场 -
+办理登机手续 - 出发回上海</p>
+<p>💡 <strong>建议</strong>：</p>
+<ul>
+<li><strong>方案A（太宰府）</strong>：如果12/31没去太宰府，推荐方案A</li>
+<li><strong>方案B（福冈塔）</strong>：如果12/27没去福冈塔（已预订门票），推荐方案B ⭐</li>
+<li><strong>根据航班时间灵活调整</strong></li>
+</ul>
+<p>⚠️ <strong>重要提醒</strong>：</p>
+<ul>
+<li><strong>福冈塔门票</strong>：12/27已预订¥800，因航班延误未使用</li>
+<li><strong>建议</strong>：1/2上午使用（方案B），或改到1/1下午（如果开放）</li>
+<li><strong>如果门票可以退</strong>：也可以选择退票</li>
+</ul>
+<h4 id="住宿安排-6">住宿安排</h4>
+<ul>
+<li>无（返程日）</li>
+</ul>
+<h4 id="美食推荐-5">美食推荐</h4>
+<ul>
+<li><strong>午餐</strong>（12:00-12:30）
+<ul>
+<li>根据选择的方案，在博多/天神或购物中心附近用餐</li>
+</ul></li>
+<li><strong>伴手礼推荐</strong>
+<ul>
+<li>明太子（福太郎、椒房庵）- 需冷藏</li>
+<li>博多通饼（二○加煎餅）</li>
+<li>梅枝饼（太宰府）</li>
+<li>熊本熊周边</li>
+<li>别府温泉化妆品</li>
+</ul></li>
+</ul>
+<h4 id="景点推荐-6">景点推荐</h4>
+<ul>
+<li><strong>太宰府天满宫</strong>（方案A）
+<ul>
+<li><strong>交通</strong>：西铁电车约25分钟</li>
+<li><strong>特色</strong>：参拜、参道购物、品尝梅枝饼</li>
+<li><strong>建议游览时间</strong>：2小时</li>
+</ul></li>
+<li><strong>福冈塔</strong>（方案B）⭐ 推荐使用12/27预订的门票
+<ul>
+<li><strong>门票</strong>：¥800 ✅ 已预订（12/27因航班延误未使用）</li>
+<li><strong>开放时间</strong>：09:30-22:00（1月2日需确认）</li>
+<li><strong>特色</strong>：高度234米，可眺望福冈全景和海景</li>
+<li><strong>交通</strong>：地铁博多站 → 西新站（约10分钟，¥200），步行约10分钟</li>
+<li><strong>建议游览时间</strong>：1-1.5小时</li>
+<li><strong>注意</strong>：如果门票有使用期限，需确认是否可以在1/2使用</li>
+</ul></li>
+<li><strong>大濠公园</strong>（方案B备选）
+<ul>
+<li><strong>门票</strong>：免费</li>
+<li><strong>特色</strong>：环湖散步</li>
+</ul></li>
+</ul>
+<h4 id="购物推荐">购物推荐</h4>
+<ul>
+<li><strong>博多运河城</strong>：综合商场（1月2日可能下午开始营业）</li>
+<li><strong>天神地下街</strong>：欧式地下街，约600米</li>
+<li><strong>博多站</strong>：MING、东急手创、阪急百货</li>
+<li>⚠️ <strong>建议提前确认1月2日营业时间</strong></li>
+</ul>
+<h4 id="机场交通">机场交通</h4>
+<ul>
+<li><strong>地铁</strong>：博多站/天神 → 福冈机场（5-10分钟，¥260）</li>
+<li><strong>出租车</strong>：约¥1,500-2,000（20分钟）</li>
+<li>⚠️ <strong>预留充足时间</strong>，建议提前2.5-3小时到机场</li>
+</ul>
+<hr />
+<h2 id="交通总览">🚄 交通总览</h2>
+<h3 id="优化路线不走回头路">优化路线（不走回头路）</h3>
+<p><strong>福冈 → 熊本 → 阿苏 → 别府（2晚）→ 福冈</strong></p>
+<p>这样走的好处： - ✅ 从阿苏直接去别府，不回熊本，省时省力 - ✅
+别府2晚深度体验温泉文化，可以完整游览 - ✅
+行李直接从熊本带到别府，一路向前 - ✅ 福冈2晚，跨年和元旦活动更充分 - ✅
+别府八地狱、温泉街、沙浴都有时间体验</p>
+<h3 id="路线地图">📍 路线地图</h3>
+<h4 id="文本路线图">文本路线图</h4>
+<pre><code>福冈（12/27，快活CLUB）
+  ↓ JR新干线 40分钟（约130公里，JR Pass免费）
+熊本（12/28，东横旅馆）
+  ↓ 阿苏男孩号观光列车 1小时35分钟（约50公里，JR Pass免费）
+阿苏站（阿苏地区，12/29）
+  ↓ 巴士/出租车前往火山口（约35分钟，需另付费）
+阿苏火山（半日游）
+  ↓ 返回阿苏站
+  ↓ JR豊肥本線 + JR日豊本線 2.5小时（约60公里，JR Pass免费，需在大分转车）
+别府（12/29-30，Hotel Calm + amenek酒店，2晚）
+  ↓ JR日豊本線 50分钟（约40公里，JR Pass免费）
+由布院（12/31上午）
+  ↓ 由布院之森观光列车 2小时10分钟（约120公里，JR Pass免费）
+福冈（12/31-1/1，华盛顿R&amp;B酒店，2晚）跨年 + 新年</code></pre>
+<h4 id="地理位置关系图">地理位置关系图</h4>
+<pre><code>        福冈（起点/终点）
+           ↙    ↘
+        熊本    别府
+           ↘    ↙
+          阿苏火山</code></pre>
+<h4 id="在线地图链接">🗺️ 在线地图链接</h4>
+<p><strong>Google Maps 路线规划</strong>： - <a
+href="https://www.google.com/maps/dir/福冈市/熊本市">福冈 → 熊本</a> -
+<a href="https://www.google.com/maps/dir/熊本市/阿苏市">熊本 → 阿苏</a>
+- <a href="https://www.google.com/maps/dir/阿苏市/别府市">阿苏 →
+别府</a> - <a href="https://www.google.com/maps/dir/别府市/福冈市">别府
+→ 福冈</a></p>
+<p><strong>主要景点位置</strong>： - <a
+href="https://goo.gl/maps/kumamoto-castle">熊本城</a> - <a
+href="https://goo.gl/maps/aso-volcano">阿苏火山口</a> - <a
+href="https://goo.gl/maps/beppu-hells">别府八地狱</a></p>
+<p><strong>推荐地图APP</strong>： - <strong>Google
+Maps</strong>（境外首选，最准确） -
+<strong>换乘案内</strong>（日本交通查询） -
+<strong>百度地图</strong>（国内可用，但日本数据较少）</p>
+<h4 id="距离参考使用jr-pass">📐 距离参考（使用JR Pass）</h4>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 25%" />
+<col style="width: 16%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>路线</th>
+<th>距离</th>
+<th>交通方式</th>
+<th>时间</th>
+<th>JR Pass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>福冈 → 熊本</td>
+<td>130公里</td>
+<td>JR新干线</td>
+<td>40分钟</td>
+<td>✅ 免费</td>
+</tr>
+<tr>
+<td>熊本 → 阿苏</td>
+<td>50公里</td>
+<td>阿苏男孩号观光列车</td>
+<td>1小时35分钟</td>
+<td>✅ 免费（需预约）</td>
+</tr>
+<tr>
+<td>阿苏 → 别府</td>
+<td>60公里</td>
+<td>JR豊肥本線 + JR日豊本線</td>
+<td>2.5小时（需转车）</td>
+<td>✅ 免费</td>
+</tr>
+<tr>
+<td>别府 → 由布院</td>
+<td>40公里</td>
+<td>JR日豊本線</td>
+<td>50分钟</td>
+<td>✅ 免费</td>
+</tr>
+<tr>
+<td>由布院 → 福冈</td>
+<td>120公里</td>
+<td>由布院之森观光列车</td>
+<td>2小时10分钟</td>
+<td>✅ 免费（需预约）</td>
+</tr>
+<tr>
+<td><strong>市内交通</strong></td>
+<td>-</td>
+<td>地铁、巴士、出租车</td>
+<td>-</td>
+<td>❌ 需另付费</td>
+</tr>
+</tbody>
+</table>
+<h4 id="九州地图概览">🗺️ 九州地图概览</h4>
+<p><strong>九州岛地理位置</strong>：</p>
+<pre><code>        福冈（北九州）
+           ↙    ↘
+        熊本    别府（大分县）
+           ↘    ↙
+          阿苏（熊本县中部）</code></pre>
+<p><strong>详细位置说明</strong>： -
+<strong>福冈</strong>：九州北部，福冈县，九州最大城市 -
+<strong>熊本</strong>：九州中部，熊本县，熊本城所在地 -
+<strong>阿苏</strong>：熊本县东部，阿苏火山所在地 -
+<strong>别府</strong>：九州东北部，大分县，温泉胜地</p>
+<p><strong>推荐查看完整地图</strong>： - <a
+href="https://www.google.com/maps/@33.0,131.0,8z">九州地图 - Google
+Maps</a> - <a
+href="https://www.jrkyushu.co.jp/railway/route_map/">九州JR路线图</a></p>
+<h3 id="jr-九州铁路周游券已购买">JR 九州铁路周游券（已购买）✅</h3>
+<p><strong>北九州版 3日券或5日券</strong></p>
+<ul>
+<li>✅ 已购买</li>
+<li>覆盖区域：福冈、熊本、阿苏、别府、大分、由布院等北九州区域</li>
+<li>可乘坐：新干线、特急列车、普通列车、<strong>观光列车</strong></li>
+<li>使用范围：
+<ul>
+<li>✅ 福冈 ↔︎ 熊本（新干线）</li>
+<li>✅ 熊本 ↔︎ 阿苏（<strong>阿苏男孩号观光列车</strong>）⭐</li>
+<li>✅ 阿苏 ↔︎ 别府（JR豊肥本線+日豊本線）</li>
+<li>✅ 别府 ↔︎ 由布院（JR久大本線）</li>
+<li>✅ 由布院 ↔︎ 博多（<strong>由布院之森观光列车</strong>）⭐</li>
+</ul></li>
+</ul>
+<p><strong>可乘坐的观光列车</strong>： - ⭐
+<strong>阿苏男孩号</strong>（ASO BOY!）：熊本 ↔︎ 阿苏 - ⭐
+<strong>由布院之森</strong>（ゆふいんの森）：由布院 ↔︎ 博多 -
+全部免费，但需提前预约指定席</p>
+<p><strong>使用说明</strong>： - 观光列车需要提前预约指定席 -
+在JR绿色窗口或网上预约 - 出示JR Pass即可免费预约</p>
+<h3 id="其他交通费用需另付">其他交通费用（需另付）</h3>
+<ul>
+<li>福冈市内地铁：每日¥500-1,000</li>
+<li>别府地狱巡游巴士一日券：¥900</li>
+<li><strong>阿苏站 → 火山口巴士</strong>：¥650单程，¥1,300往返</li>
+<li>阿苏站 → 火山口出租车（可选）：¥3,000-4,000单程</li>
+</ul>
+<hr />
+<h2 id="住宿总览">🏨 住宿总览</h2>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 36%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>日期</th>
+<th>地点</th>
+<th>酒店</th>
+<th>预算（单晚）</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12/27（周六）</td>
+<td>福冈</td>
+<td>博多站/天神附近</td>
+<td>¥6,000-10,000</td>
+<td>商务酒店（待预订）</td>
+</tr>
+<tr>
+<td>12/28（周日）</td>
+<td>熊本</td>
+<td><strong>东横旅馆 熊本站前</strong>⭐</td>
+<td>已预订</td>
+<td>商务酒店，熊本站步行即达</td>
+</tr>
+<tr>
+<td>12/29（周一）</td>
+<td>别府</td>
+<td><strong>Hotel Calm</strong>⭐</td>
+<td>已预订</td>
+<td>第1晚</td>
+</tr>
+<tr>
+<td>12/30（周二）</td>
+<td>别府</td>
+<td><strong>amenek酒店</strong>⭐</td>
+<td>已预订</td>
+<td>第2晚</td>
+</tr>
+<tr>
+<td>12/31（周三）</td>
+<td>福冈</td>
+<td><strong>华盛顿R&amp;B酒店博多站前第2</strong>⭐</td>
+<td>已预订</td>
+<td>跨年酒店（连住2晚）</td>
+</tr>
+<tr>
+<td>1/1（周四）</td>
+<td>福冈</td>
+<td><strong>华盛顿R&amp;B酒店博多站前第2</strong>⭐</td>
+<td>已预订</td>
+<td>元旦期间（同一酒店）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>总住宿费用</strong>：6晚</p>
+<p>✅ <strong>已确认</strong>： - ✅ 熊本12/28：东横旅馆 熊本站前 - ✅
+别府12/29-30：Hotel Calm + amenek酒店（2晚） - ✅
+福冈12/31-1/1：华盛顿R&amp;B酒店博多站前第2（连住2晚）⭐</p>
+<p>⚠️ <strong>待预订</strong>： - ⚠️ 福冈12/27（1晚）- 建议尽快预订</p>
+<hr />
+<h2 id="预算明细每人">💰 预算明细（每人）</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>费用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>交通</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>JR 九州周游券（3日或5日）</td>
+<td>已购买 ✅</td>
+</tr>
+<tr>
+<td>阿苏站→火山口巴士往返</td>
+<td>¥1,300</td>
+</tr>
+<tr>
+<td>阿苏站→火山口出租车（可选）</td>
+<td>¥6,000-8,000</td>
+</tr>
+<tr>
+<td>市内交通（地铁、巴士）</td>
+<td>¥5,000</td>
+</tr>
+<tr>
+<td><strong>住宿（6晚）</strong></td>
+<td>已预订2晚别府 + 4晚待订</td>
+</tr>
+<tr>
+<td>福冈1晚（12/27）</td>
+<td>¥6,000-10,000</td>
+</tr>
+<tr>
+<td>熊本1晚（12/28）</td>
+<td>¥6,000-10,000</td>
+</tr>
+<tr>
+<td>别府2晚（12/29-30）</td>
+<td>已预订</td>
+</tr>
+<tr>
+<td>福冈2晚（12/31-1/1）</td>
+<td>¥16,000-30,000</td>
+</tr>
+<tr>
+<td><strong>餐饮</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>早餐（7次 × ¥1,000）</td>
+<td>¥7,000</td>
+</tr>
+<tr>
+<td>午餐（7次 × ¥1,500）</td>
+<td>¥10,500</td>
+</tr>
+<tr>
+<td>晚餐（7次 × ¥3,000）</td>
+<td>¥21,000</td>
+</tr>
+<tr>
+<td><strong>门票、活动</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>熊本城</td>
+<td>¥800</td>
+</tr>
+<tr>
+<td>水前寺成趣园</td>
+<td>¥400</td>
+</tr>
+<tr>
+<td>阿苏火山</td>
+<td>¥1,000</td>
+</tr>
+<tr>
+<td>别府八地狱（30号，通票）</td>
+<td>¥2,200</td>
+</tr>
+<tr>
+<td><strong>由布院梦想园日归温泉</strong>（31号）</td>
+<td>¥1,500-2,000</td>
+</tr>
+<tr>
+<td><strong>别府→由布院JR</strong>（31号，JR Pass免费）</td>
+<td>¥0 ✅</td>
+</tr>
+<tr>
+<td><strong>由布院出租车（往返）</strong>（31号）</td>
+<td>¥3,000</td>
+</tr>
+<tr>
+<td><strong>由布院之森列车</strong>（31号，JR Pass免费）</td>
+<td>¥0 ✅</td>
+</tr>
+<tr>
+<td>别府沙浴（可选）</td>
+<td>¥1,050</td>
+</tr>
+<tr>
+<td>福冈塔</td>
+<td>¥800</td>
+</tr>
+<tr>
+<td>太宰府散策券</td>
+<td>¥1,000</td>
+</tr>
+<tr>
+<td>其他景点</td>
+<td>¥1,000</td>
+</tr>
+<tr>
+<td><strong>购物、伴手礼</strong></td>
+<td>自定</td>
+</tr>
+<tr>
+<td><strong>合计（不含别府住宿）</strong></td>
+<td><strong>¥92,240-137,340</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>不含机票和别府2晚住宿费</strong></p>
+<p>💡 <strong>费用说明</strong>：</p>
+<ul>
+<li>✅ JR Pass已购买：所有长途JR交通免费（节省约¥20,000）</li>
+<li>✅ 别府→由布院JR免费</li>
+<li>✅ 由布院之森列车JR Pass免费（仅需预约指定席）</li>
+<li>✅ 删除了租车/包车费用（节省¥8,000-12,000）</li>
+<li>阿苏站到火山口需要巴士（¥1,300）或出租车（¥6,000-8,000）</li>
+<li>30号完整游览八地狱（¥2,200通票）</li>
+<li><strong>相比租车方案，总费用节省约¥15,000-25,000</strong></li>
+</ul>
+<p>✅ <strong>行程优势</strong>：</p>
+<ul>
+<li><strong>已购买JR Pass</strong>：长途交通全免费，节省大量交通费
+⭐⭐⭐⭐⭐</li>
+<li><strong>29号上午</strong>：搭乘<strong>阿苏男孩号观光列车</strong>去阿苏（超可爱的黑狗主题）⭐⭐⭐⭐⭐</li>
+<li><strong>29号下午</strong>：阿苏火山、草千里游览，傍晚抵达别府</li>
+<li><strong>30号全天</strong>：别府深度游览（完整八地狱 + 地狱蒸料理 +
+温泉街）</li>
+<li><strong>31号上午</strong>：由布院梦想园温泉（重点体验）</li>
+<li><strong>31号下午</strong>：搭乘<strong>由布院之森观光列车</strong>去福冈
+⭐⭐⭐⭐⭐</li>
+<li><strong>乘坐2辆九州最有名的观光列车</strong>（阿苏男孩号 +
+由布院之森）</li>
+<li>别府2晚深度体验温泉文化</li>
+<li>两家酒店体验不同风格（Hotel Calm + amenek）</li>
+<li>没有重复景点，每天都有新体验</li>
+</ul>
+<p>💡 <strong>省钱Tips</strong>： - ✅ <strong>JR
+Pass已购买</strong>：福冈↔︎熊本、熊本↔︎阿苏、阿苏↔︎别府、别府↔︎由布院、由布院↔︎福冈全免费
+- ✅ <strong>由布院之森列车</strong>使用JR Pass免费，只需预约指定席 - ✅
+市内交通用手机西瓜卡（Suica）✅ 已准备（之前用过） -
+由布院可以步行去梦想园（省出租车费¥3,000，但需要走30分钟上坡路） -
+阿苏站到火山口可以乘巴士（¥1,300）比出租车（¥6,000-8,000）便宜 -
+元旦期间很多商店关门，购物集中在12/27-28和1/2 -
+由布院B-speak瑞士卷是必买伴手礼（但每天限量，要早点买）</p>
+<p>⚠️ <strong>重要提醒</strong>： -
+<strong>阿苏男孩号必须提前预约指定席！</strong>（12/29
+09:57熊本→11:32阿苏） -
+<strong>由布院之森列车必须提前预约指定席！</strong>（12/31
+15:56由布院→18:10博多） - 两辆观光列车都很热门，跨年期间更紧张 -
+<strong>建议立即预约，越早越好</strong> - JR
+Pass可以免费乘坐，但需要提前预约指定席 -
+阿苏站到火山口的巴士时刻表需提前查询</p>
+<p>🎫 <strong>预约方式</strong>： - JR绿色窗口（到日本后） -
+JR九州官网：https://www.jrkyushu.co.jp/ -
+携程、飞猪等平台（国内提前预约）</p>
+<hr />
+<h2 id="美食清单">🍜 美食清单</h2>
+<h3 id="福冈必吃">福冈必吃</h3>
+<ul>
+<li>✅ 博多拉面（一兰、一风堂）</li>
+<li>✅ 明太子（ふくや）</li>
+<li>✅ 牛肠锅/もつ鍋（やま中、おおやま）</li>
+<li>✅ 水炊き（博多华味鳥）</li>
+<li>✅ 屋台美食（中洲屋台街）</li>
+<li>✅ <strong>地鶏屋 亜門</strong>（地鸡屋 亚门）⭐⭐⭐⭐⭐ ✅ 已预订（12/31 19:00）
+<ul>
+<li><strong>地址</strong>：福冈市博多区中洲2-8-10 ✅ 已确认</li>
+<li><strong>交通</strong>：博多站 → 中洲川端站（地铁2分钟，¥200）→ 步行5分钟 ✅ 已确认</li>
+<li><strong>电话</strong>：092-282-3335 ✅</li>
+<li><strong>营业时间</strong>：周一至周六 17:30-次日3:00（最后点餐2:30），周日休息</li>
+<li><strong>特色</strong>：福冈地鸡料理，跨年特色年夜饭</li>
+<li><strong>预订时间</strong>：12/31（周三）19:00 ✅</li>
+</ul></li>
+<li>✅ <strong>黑毛和牛 博多牛まぶし 武藏 天神店</strong> ⭐⭐⭐⭐⭐ ⚠️ 需预订（1/1 19:00）
+<ul>
+<li><strong>特色</strong>：黑毛和牛牛肉饭（博多牛まぶし），福冈特色料理</li>
+<li><strong>预订时间</strong>：1/1（周四）19:00 ⚠️ 需确认是否营业</li>
+<li><strong>地址</strong>：福冈市中央区天神（具体地址需确认）</li>
+<li><strong>交通</strong>：博多站 → 天神站（地铁约5-10分钟，¥200）</li>
+<li><strong>预订方式</strong>：AutoReserve（<a href="https://autoreserve.com/zh-cn/restaurants/y3tDTnWRJr7jFUkzqNma">https://autoreserve.com/zh-cn/restaurants/y3tDTnWRJr7jFUkzqNma</a>）或电话预订</li>
+<li>⚠️ <strong>重要</strong>：1月1日是元旦，需提前确认是否营业</li>
+</ul></li>
+</ul>
+<h3 id="熊本必吃">熊本必吃</h3>
+<ul>
+<li>✅ 熊本拉面（黑亭、桂花）</li>
+<li>✅ 马肉刺身（菅乃屋）</li>
+<li>✅ 太平燕（红兰亭）</li>
+<li>✅ 熊本城下町料理</li>
+</ul>
+<h3 id="阿苏必吃">阿苏必吃</h3>
+<ul>
+<li>✅ 赤牛丼（あか牛丼）</li>
+<li>✅ 高菜饭</li>
+<li>✅ 阿苏牛奶、布丁</li>
+</ul>
+<h3 id="由布院必吃">由布院必吃 ⭐⭐⭐⭐⭐</h3>
+<ul>
+<li>✅ B-speak瑞士卷（必买伴手礼，每天限量）</li>
+<li>✅ 金賞可乐饼（现炸现吃）</li>
+<li>✅ 由布まぶし心（丰后牛盖饭）</li>
+<li>✅ 汤之坪街道各种甜品（布丁、冰淇淋）</li>
+<li>✅ 花麴菊家（和菓子）</li>
+</ul>
+<h3 id="别府必吃">别府必吃</h3>
+<ul>
+<li>✅ 地狱蒸料理（岡本屋）⭐⭐⭐ 必吃</li>
+<li>✅ 地狱蒸布丁（伴手礼）</li>
+<li>✅ 关竹䓍鱼、关竹荚魚</li>
+<li>✅ 温泉旅馆会席料理</li>
+<li>✅ 别府冷面</li>
+</ul>
+<hr />
+<h2 id="伴手礼推荐-1">🎁 伴手礼推荐</h2>
+<h3 id="福冈">福冈</h3>
+<ul>
+<li>明太子（福太郎、椒房庵）- 需冷藏</li>
+<li>博多通饼（二○加煎餅）</li>
+<li>八女茶</li>
+<li>博多人形</li>
+</ul>
+<h3 id="熊本">熊本</h3>
+<ul>
+<li>熊本熊周边商品</li>
+<li>馬油（马油护肤品）</li>
+<li>辛子莲根（腌制食品）</li>
+</ul>
+<h3 id="由布院">由布院 ⭐⭐⭐⭐⭐</h3>
+<ul>
+<li><strong>B-speak瑞士卷</strong>（必买！每天限量，建议早点买）</li>
+<li>花麴菊家和菓子</li>
+<li>金鳞湖相关纪念品</li>
+<li>汤之坪街道各种手工艺品</li>
+</ul>
+<h3 id="别府">别府</h3>
+<ul>
+<li>温泉化妆品（温泉水面膜等）</li>
+<li>地狱蒸布丁（保质期短，适合回程当天购买）</li>
+<li>湯の花（温泉结晶，明礬温泉）</li>
+</ul>
+<h3 id="太宰府">太宰府</h3>
+<ul>
+<li>梅枝饼（现做现吃）</li>
+<li>学业御守</li>
+</ul>
+<p>⚠️ <strong>元旦购物提醒</strong>： - 12/31下午商店会提前关门 -
+1/1大部分商店休息 - 1/2开始恢复营业 -
+<strong>建议在12/27-30集中购物，1/2最后补充</strong></p>
+<hr />
+<h2 id="重要提醒">⚠️ 重要提醒</h2>
+<h3 id="天气准备">天气准备</h3>
+<ul>
+<li><strong>气温</strong>：12月底1月初，平均5-12°C</li>
+<li><strong>穿搭</strong>：羽绒服、毛衣、围巾、手套</li>
+<li><strong>阿苏山区</strong>：更冷，需加强保暖</li>
+</ul>
+<h3 id="阿苏火山注意事项">阿苏火山注意事项</h3>
+<ul>
+<li>⚠️ <strong>必须提前查询开放情况</strong>（出发前1-2天再次确认）
+<ul>
+<li>官网：http://www.aso-volcano.jp/chinese/html/hours.html</li>
+</ul></li>
+<li><strong>开放时间</strong>：9:00-16:30（17:00关门）</li>
+<li>火山活动频繁，可能临时关闭</li>
+<li>有呼吸道疾病者谨慎前往</li>
+</ul>
+<h3 id="温泉礼仪">温泉礼仪</h3>
+<ol type="1">
+<li>入浴前必须先淋浴清洗身体</li>
+<li>毛巾不可浸入温泉水中</li>
+<li>需全裸入浴（日本传统）</li>
+<li>不可在浴池内游泳或搓洗</li>
+<li>有纹身者部分温泉可能拒绝入内</li>
+</ol>
+<h3 id="元旦假期特别注意事项重要">🎊 元旦假期特别注意事项（重要！）</h3>
+<h4 id="月31日跨年前夕">12月31日（跨年前夕）</h4>
+<ul>
+<li>⚠️ <strong>商店提前关门</strong>：很多商店下午或傍晚就关门</li>
+<li>⚠️ <strong>餐厅需预约</strong>：特别是好的餐厅，建议提前预约</li>
+<li>✅ <strong>寺庙神社热闹</strong>：除夜祭、跨年钟声</li>
+<li>✅ <strong>公共交通延长</strong>：地铁、巴士会延长运营</li>
+<li>💡 <strong>建议</strong>：在便利店备好食物和水</li>
+</ul>
+<h4 id="月1日元旦">1月1日（元旦）</h4>
+<ul>
+<li>🚫 <strong>大部分商店关闭</strong>：
+<ul>
+<li>百货商店、购物中心</li>
+<li>大部分餐厅（特别是小店）</li>
+<li>博物馆、美术馆</li>
+</ul></li>
+<li>✅ <strong>正常营业</strong>：
+<ul>
+<li>便利店（7-11、全家、罗森）</li>
+<li>部分连锁餐厅（麦当劳、吉野家、松屋）</li>
+<li>部分拉面店（一兰等）</li>
+</ul></li>
+<li>✅ <strong>推荐活动</strong>：
+<ul>
+<li>寺庙神社新年参拜（初詣）</li>
+<li>公园散步</li>
+<li>体验日本传统新年氛围</li>
+</ul></li>
+</ul>
+<h4 id="月2日">1月2日</h4>
+<ul>
+<li>✅ <strong>商店开始恢复营业</strong></li>
+<li>⚠️ <strong>可能下午才开</strong>：百货商店可能从下午开始营业</li>
+<li>💡 <strong>建议</strong>：上午游览景点，下午购物</li>
+</ul>
+<h4 id="跨年体验活动">跨年体验活动</h4>
+<ul>
+<li><strong>除夜の鐘</strong>：12月31日深夜，寺庙敲钟108次</li>
+<li><strong>初詣</strong>：1月1日新年第一次参拜</li>
+<li><strong>おみくじ</strong>：神社抽签</li>
+<li><strong>お守り</strong>：购买御守</li>
+<li><strong>初日の出</strong>：看新年第一次日出（如果早起）</li>
+</ul>
+<h3 id="预订建议紧急">预订建议（紧急！）</h3>
+<ul>
+<li>✅ <strong>已完成预订</strong>：
+<ul>
+<li>✅ <strong>阿苏男孩号指定席</strong>（12/29 09:57）✅ 已预约</li>
+<li>✅ <strong>由布院之森指定席</strong>（12/31 15:56）✅ 已预约 ✅
+发车时间已确认</li>
+<li>✅ <strong>电话流量卡</strong>（7天15G）✅ 已预订</li>
+<li>✅ <strong>手机西瓜卡</strong>（Suica）✅ 已准备（之前用过）</li>
+<li>✅ <strong>福冈塔门票</strong>（12/27）✅ 已预订</li>
+<li>✅ <strong>おおやま（Oyama）牛肠锅</strong>（12/27 19:00）✅
+已预订</li>
+<li>✅ <strong>熊本城3馆门票</strong>（12/28）✅ 已预订</li>
+<li>✅ 熊本12/28：东横旅馆 熊本站前</li>
+<li>✅ 别府12/29-30：Hotel Calm + amenek酒店（2晚）</li>
+<li>✅ 福冈12/31-1/1：华盛顿R&amp;B酒店博多站前第2（2晚）</li>
+<li>✅ 福冈12/27：快活CLUB（已计划）</li>
+<li>✅ <strong>地鶏屋 亜門跨年晚餐</strong>（12/31 19:00）✅ 已预订</li>
+<li>⚠️ <strong>武藏餐厅元旦晚餐</strong>（1/1 19:00）⚠️ 需预订并确认是否营业</li>
+</ul></li>
+<li>🟡 <strong>尽快预订</strong>：
+<ul>
+<li>⚠️ <strong>武藏餐厅（1/1 19:00）</strong>：需确认1月1日是否营业并尽快预订</li></li>
+<li>🟢 <strong>可现场</strong>：
+<ul>
+<li>景点门票</li>
+<li>餐厅（非高级，非跨年）</li>
+<li>巴士票</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="实用信息">📱 实用信息</h2>
+<h3 id="紧急联系">紧急联系</h3>
+<ul>
+<li>日本报警：110</li>
+<li>日本急救：119</li>
+<li>中国驻福冈总领馆：+81-92-713-1121</li>
+</ul>
+<h3 id="实用app">实用APP</h3>
+<ul>
+<li><strong>Google Maps</strong>：导航必备</li>
+<li><strong>换乘案内</strong>：日本交通查询</li>
+<li><strong>Tabelog</strong>：美食点评</li>
+<li><strong>Jalan / Rakuten Travel</strong>：酒店预订</li>
+<li><strong>有道翻译</strong>：语言沟通</li>
+</ul>
+<h3 id="wi-fi-网络">Wi-Fi / 网络</h3>
+<ul>
+<li>机场租赁Wi-Fi（推荐）</li>
+<li>购买日本SIM卡（7天约¥3,000）</li>
+</ul>
+<h3 id="语言">语言</h3>
+<ul>
+<li>英语：旅游区基本可沟通</li>
+<li>建议下载翻译APP</li>
+<li>准备常用日语短语</li>
+</ul>
+<hr />
+<h2 id="出发前检查清单">✅ 出发前检查清单</h2>
+<h3 id="证件类">证件类</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />护照（有效期6个月以上）</label></li>
+<li><label><input type="checkbox" />日本签证</label></li>
+<li><label><input type="checkbox" />机票确认单</label></li>
+<li><label><input type="checkbox" />酒店预订确认单</label></li>
+<li><label><input type="checkbox" />JR Pass兑换券</label></li>
+</ul>
+<h3 id="资金类">资金类</h3>
+<ul class="task-list">
+<li><label><input
+type="checkbox" />日元现金（建议准备¥50,000-80,000）</label></li>
+<li><label><input
+type="checkbox" />信用卡（Visa/MasterCard）</label></li>
+<li><label><input type="checkbox" />银联卡</label></li>
+</ul>
+<h3 id="电子类">电子类</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />手机、充电器</label></li>
+<li><label><input type="checkbox" />充电宝</label></li>
+<li><label><input
+type="checkbox" />转换插头（日本A型，100V）</label></li>
+<li><label><input type="checkbox" />Wi-Fi设备或SIM卡</label></li>
+</ul>
+<h3 id="衣物类">衣物类</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />羽绒服/厚外套</label></li>
+<li><label><input type="checkbox" />保暖内衣</label></li>
+<li><label><input type="checkbox" />围巾、手套、帽子</label></li>
+<li><label><input type="checkbox" />舒适的步行鞋</label></li>
+<li><label><input type="checkbox" />换洗衣物</label></li>
+</ul>
+<h3 id="其他">其他</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />常用药品</label></li>
+<li><label><input type="checkbox" />雨伞</label></li>
+<li><label><input type="checkbox" />保温杯</label></li>
+<li><label><input type="checkbox" />相机</label></li>
+<li><label><input
+type="checkbox" />行李箱（留出伴手礼空间）</label></li>
+</ul>
+<hr />
+<h2 id="旅行小贴士">🎌 旅行小贴士</h2>
+<ol type="1">
+<li><strong>时差</strong>：日本比中国快1小时</li>
+<li><strong>电压</strong>：100V，双扁头插座</li>
+<li><strong>小费</strong>：日本无小费文化</li>
+<li><strong>购物</strong>：满¥5,000可退税（护照必须携带）</li>
+<li><strong>垃圾分类</strong>：请遵守日本垃圾分类规则</li>
+<li><strong>禁烟</strong>：多数公共场所禁烟，请在吸烟区吸烟</li>
+<li><strong>交通</strong>：乘车排队，不可大声喧哗</li>
+<li><strong>拍照</strong>：神社、寺庙内部部分禁止拍照</li>
+</ol>
+<hr />
+<h2 id="酒店预订建议">📞 酒店预订建议</h2>
+<h3 id="福冈博多站天神">福冈（博多站/天神）</h3>
+<ul>
+<li><strong>Richmond Hotel 博多站前</strong>
+<ul>
+<li>地址：福岡市博多区博多駅前3-6-11</li>
+<li>特点：距博多站步行5分钟</li>
+</ul></li>
+<li><strong>Dormy Inn Premium 博多运河城前</strong>
+<ul>
+<li>地址：福岡市博多区祇園町9-1</li>
+<li>特点：有温泉大浴场</li>
+</ul></li>
+</ul>
+<h3 id="熊本-1">熊本</h3>
+<ul>
+<li><strong>三井花园酒店熊本</strong>
+<ul>
+<li>地址：熊本市中央区紺屋今町1-20</li>
+<li>特点：市中心，交通便利</li>
+</ul></li>
+</ul>
+<h3 id="别府温泉旅馆">别府温泉旅馆</h3>
+<ul>
+<li><strong>杉乃井ホテル</strong>
+<ul>
+<li>地址：大分県別府市観海寺1</li>
+<li>特点：大型温泉酒店，设施豪华</li>
+</ul></li>
+<li><strong>山田别荘</strong>
+<ul>
+<li>地址：大分県別府市鉄輪御幸3組</li>
+<li>特点：传统旅馆，私密性好</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="日本新年体验指南">🎊 日本新年体验指南</h2>
+<h3 id="传统新年活动">传统新年活动</h3>
+<ol type="1">
+<li><strong>除夜の鐘</strong>（12/31深夜）
+<ul>
+<li>寺庙敲钟108次，驱除烦恼</li>
+<li>推荐：栉田神社、东长寺</li>
+</ul></li>
+<li><strong>初詣</strong>（1/1新年参拜）
+<ul>
+<li>新年第一次参拜，祈求好运</li>
+<li>推荐：栉田神社、太宰府天满宫</li>
+</ul></li>
+<li><strong>おみくじ</strong>（抽签）
+<ul>
+<li>在神社抽签，了解新年运势</li>
+<li>不好的签可以系在神社树上</li>
+</ul></li>
+<li><strong>お守り</strong>（御守）
+<ul>
+<li>购买各种御守（平安、学业、恋爱等）</li>
+</ul></li>
+<li><strong>初日の出</strong>（新年日出）
+<ul>
+<li>看新年第一次日出</li>
+<li>推荐：福冈塔、海边</li>
+</ul></li>
+</ol>
+<h3 id="新年美食">新年美食</h3>
+<ul>
+<li><strong>おせち料理</strong>（御节料理）：传统新年套餐</li>
+<li><strong>お雑煮</strong>（杂煮）：年糕汤</li>
+<li><strong>年越しそば</strong>（跨年荞麦面）：12/31晚上吃</li>
+</ul>
+<hr />
+<p>祝您旅途愉快！🎌✨🎊 体验难忘的日本传统新年！</p>
+<hr />
+<p><strong>文档生成时间</strong>：2025年11月<br />
+<strong>版本</strong>：V2.0 - 跨年版</p>
+</div>
+</body>
+</html>
